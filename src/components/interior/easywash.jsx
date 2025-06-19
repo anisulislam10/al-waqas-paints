@@ -73,7 +73,7 @@ EasyWash is a modified acrylic emulsion paint with non-added lead and mercury wh
     //     { name: "Recoat Time", value: "4-6 hours" },
     //     { name: "Finish", value: "Eggshell" }
     //   ]}
-      technicalDataSheetUrl="/pdf/NIPPON-ODOUR-LESS-AirCare-_compressed.pdf"
+      technicalDataSheetUrl="/pdf/NIPPON-Easy-Wash_compressed.pdf"
       shadeCardsUrl="/pdf/namecheap-order-153116483_compressed-1.pdf"
     //   price="PKR 3,500 per gallon"
     />
