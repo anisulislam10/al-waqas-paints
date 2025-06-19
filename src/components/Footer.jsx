@@ -65,7 +65,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex gap-4 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/alwaqaspaint"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-100 transition-colors duration-200"
