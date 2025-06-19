@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: "Surface Preparation Range", image: "/our-interior-painting-services.jpg" },
     { name: "Wood and Metal", image: "/wood.webp" },
     { name: "Special Surfaces", image: "/special-surface.jpg" },
-    { name: "Tools / Other Items", image: "/tools.webp" },
+    { name: "Tools and Items", image: "/tools.webp" },
   ];
 
   useEffect(() => {
