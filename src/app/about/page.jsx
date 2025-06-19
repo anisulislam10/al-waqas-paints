@@ -52,7 +52,10 @@ export default function About() {
           <div className="lg:w-1/2 w-full">
             <div className="text-lg text-gray-600 leading-relaxed">
               <p>
-                Al-Waqas Paint is a leading provider of premium, eco-friendly coating solutions, dedicated to transforming spaces. Our passion for quality drives us to create innovative paints for interiors, exteriors, and specialty surfaces, ensuring lasting beauty and protection. With a commitment to sustainability, we use low-VOC formulas to minimize environmental impact. Serving customers in over 20 countries, Al-Waqas Paint combines cutting-edge technology with timeless craftsmanship to elevate homes and businesses worldwide.
+
+Al-Waqas Paint is a trusted name in premium, eco-conscious coating solutions—redefining how spaces look and feel. Driven by a passion for excellence, we craft innovative paints for interiors, exteriors, and specialized surfaces, offering exceptional durability and elegant finishes.<br/><br/>
+
+Our low-VOC, environmentally friendly formulations reflect our deep commitment to sustainability, helping reduce environmental impact without compromising performance. By blending advanced technology with timeless craftsmanship, Al-Waqas Paint delivers lasting beauty and protection—enhancing homes and businesses across the globe.
               </p>
             </div>
           </div>
@@ -96,7 +99,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white mb-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-extrabold mb-4">Ready to Transform Your Space?</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
