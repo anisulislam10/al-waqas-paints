@@ -42,19 +42,34 @@ export default function About() {
         </section>
 
         {/* About Al-Waqas Paint Section */}
-        <section id="about-us" className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8 relative">
-              Who We Are
-              <span className="absolute bottom-0 left-1/2 w-16 h-1 bg-red-700 transform -translate-x-1/2"></span>
-            </h2>
-            <div className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+       <section id="about-us" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8 relative">
+          Who We Are
+          <span className="absolute bottom-0 left-1/2 w-16 h-1 bg-red-700 transform -translate-x-1/2"></span>
+        </h2>
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <div className="lg:w-1/2 w-full">
+            <div className="text-lg text-gray-600 leading-relaxed">
               <p>
                 Al-Waqas Paint is a leading provider of premium, eco-friendly coating solutions, dedicated to transforming spaces. Our passion for quality drives us to create innovative paints for interiors, exteriors, and specialty surfaces, ensuring lasting beauty and protection. With a commitment to sustainability, we use low-VOC formulas to minimize environmental impact. Serving customers in over 20 countries, Al-Waqas Paint combines cutting-edge technology with timeless craftsmanship to elevate homes and businesses worldwide.
               </p>
             </div>
           </div>
-        </section>
+          <div className="lg:w-1/2 w-full">
+            <Image
+              src="/about.png"
+              alt="Al-Waqas Paint craftsmanship"
+              width={600}
+              height={400}
+              className="rounded-lg object-contain w-full h-[400px]"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
         {/* Our Values Section */}
         <section className="py-16 bg-gradient-to-b from-gray-100 to-white">
