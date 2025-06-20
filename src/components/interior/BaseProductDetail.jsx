@@ -60,7 +60,7 @@ const BaseProductDetail = ({
 
             {/* Action Buttons */}
             <div className="p-4 space-y-3 bg-white border-t border-gray-200">
-              <a href="tel:03001234567">
+              <a href="tel:+923335093223">
                 <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
                   Call Now
                 </button>

@@ -111,16 +111,16 @@ export default function Home() {
                     <svg className="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
                     </svg>
-                    <a href="tel:+923001234567" className="text-gray-900 hover:text-blue-900">
-                      +92 300 1234567
+                    <a href="tel:+923335093223" className="text-gray-900 hover:text-blue-900">
+                      +923335093223
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
                     </svg>
-                    <a href="mailto:info@alwaqaspaint.com" className="text-gray-900 hover:text-blue-900">
-                      info@alwaqaspaint.com
+                    <a href="mailto:info@sharplogician.com" className="text-gray-900 hover:text-blue-900">
+                      info@sharplogician.com
                     </a>
                   </div>
                   <div className="flex items-start gap-3">
@@ -133,7 +133,7 @@ Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamaba
                 </div>
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
                   <a
-                    href="mailto:info@alwaqaspaint.com"
+                    href="mailto:info@sharplogician.com"
                     className="inline-flex items-center px-6 py-3 bg-blue-900 text-white rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamaba
                     Email Us
                   </a>
                   <a
-                    href="tel:+923001234567"
+                    href="tel:+923335093223"
                     className="inline-flex items-center px-6 py-3 bg-red-700 text-white rounded-md font-medium hover:bg-red-800 transition-colors duration-200"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">

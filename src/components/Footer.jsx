@@ -46,18 +46,18 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <a
-                  href="mailto:info@alwaqaspaint.com"
+                  href="mailto:info@sharplogician.com"
                   className="hover:text-blue-100 transition-colors duration-200"
                 >
-                  Email: info@alwaqaspaint.com
+                  Email: info@sharplogician.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+923001234567"
+                  href="tel:+923335093223"
                   className="hover:text-blue-100 transition-colors duration-200"
                 >
-                  Phone: +92 300 1234567
+                  Phone: +923335093223
                 </a>
               </li>
               <li>Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad, Pakistan</li>

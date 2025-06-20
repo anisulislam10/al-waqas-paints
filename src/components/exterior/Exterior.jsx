@@ -147,7 +147,7 @@ const Exterior = () => {
                   <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
 
                   {/* Buy Now Button */}
-                  <a href="tel:03001234567">
+                  <a href="tel:+923335093223">
                     <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
                       Call Now
                     </button>

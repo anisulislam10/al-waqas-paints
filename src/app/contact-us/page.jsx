@@ -45,8 +45,8 @@ export default function ContactPage() {
                 </svg>
                 <div>
                   <h3 className="text-lg font-medium text-black">Email Us</h3>
-                  <a href="mailto:contact@yourcompany.com" className="text-gray-600 hover:text-red-800">
-                    contact@yourcompany.com
+                  <a href="mailto:info@sharplogician.com" className="text-gray-600 hover:text-red-800">
+                    info@sharplogician.com
                   </a>
                 </div>
               </div>
@@ -56,8 +56,8 @@ export default function ContactPage() {
                 </svg>
                 <div>
                   <h3 className="text-lg font-medium text-black">Call Us</h3>
-                  <a href="tel:+1234567890" className="text-gray-600 hover:text-red-800">
-                    +92 (234) 567-890
+                  <a href="tel:+923335093223" className="text-gray-600 hover:text-red-800">
+                    +923335093223
                   </a>
                 </div>
               </div>

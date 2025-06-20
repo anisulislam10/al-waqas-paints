@@ -77,7 +77,7 @@ export default function ToolsAndItems() {
                     </h3>
                     <p className="text-gray-600 text-sm mt-2">{tool.description}</p>
                     <a
-                      href="tel:+923001234567"
+                      href="tel:+923335093223"
                       className="inline-flex items-center mt-4 px-4 py-2 bg-blue-900 text-white rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
                     >
                       <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function ToolsAndItems() {
               Have questions about our tools or need assistance? Contact our team for expert support.
             </p>
             <a
-              href="tel:+923001234567"
+              href="tel:+923335093223"
               className="inline-flex items-center px-6 py-3 bg-red-700 text-white rounded-md font-medium hover:bg-red-800 transition-colors duration-200"
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
