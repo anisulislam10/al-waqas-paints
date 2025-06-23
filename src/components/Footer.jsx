@@ -101,9 +101,11 @@ const Footer = () => {
           </div>
         </div>
         {/* Copyright Notice */}
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Al-Waqas Paint. All rights reserved.
-        </div>
+       <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+  © {new Date().getFullYear()} Al-Waqas Paint. All rights reserved. | 
+  Designed by <a href="https://sharplogicians.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Sharplogicians</a>
+</div>
+
       </div>
     </footer>
   );
