@@ -1,7 +1,49 @@
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Define structured data as a constant (Server Component context)
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Al-Waqas Paint",
+  "url": "https://al-waqas-paints.vercel.app",
+  "logo": "https://al-waqas-paints.vercel.app/logo.png",
+  "description": "Al-Waqas Paint offers premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability and sustainability.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road",
+    "addressLocality": "Islamabad",
+    "addresscampus": "Punjab",
+    "addressCountry": "Pakistan"
+  },
+  "telephone": "+923335093223",
+  "email": "info@alwaqaspaint.com",
+  "openingHours": "Mo-Sa 09:00-17:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "85"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ali Khan" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2024-02-18",
+      "reviewBody": "Al-Waqas Paint provided excellent quality paints and great customer service!"
+    }
+  ]
+};
+
+// Export metadata for SEO (App Router style)
+export const metadata = {
+  title: "Al-Waqas Paint | Premium Coatings",
+  description: "Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
+};
+
+// Server Component (default in App Router)
 export default function Home() {
   const productCategories = [
     { name: 'Nippon Interior', image: '/interios.avif', href: '/products/interior', description: 'Eco-friendly, low-VOC paints like Odour-less All-in-1 and MozzieGuard for vibrant, safe interiors.' },
@@ -14,340 +56,15 @@ export default function Home() {
     { name: 'Wood and Metal', image: '/wood.webp', href: '/products/wood-and-metal', description: 'Durable coatings for wood and metal surfaces.' },
   ];
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://al-waqas-paints.vercel.app/#organization",
-      "name": "Al-Waqas Paint",
-      "url": "https://al-waqas-paints.vercel.app",
-      "logo": "https://al-waqas-paints.vercel.app/logo.png",
-      "image": "https://al-waqas-paints.vercel.app/store-front.jpg",
-      "description": "Premium paint and coatings supplier offering Nippon, Dulux, and other quality brands in Islamabad.",
-      "priceRange": "PKR 1000-10000",
-      "telephone": "+923335093223",
-      "email": "info@alwaqaspaint.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Nadir Plaza, Opposite Lignum Tower, DHA 2",
-        "addressLocality": "Islamabad",
-        "addressRegion": "Punjab",
-        "postalCode": "44000",
-        "addressCountry": "PK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "33.684422",
-        "longitude": "73.047884"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "00:00",
-          "closes": "00:00"
-        }
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+923335093223",
-        "contactType": "Customer Service",
-        "email": "info@alwaqaspaint.com",
-        "availableLanguage": ["English", "Urdu"]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "150"
-      },
-      "sameAs": [
-        "https://www.facebook.com/alwaqaspaint",
-        "https://twitter.com/alwaqaspaint",
-        "https://instagram.com/alwaqaspaint"
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "name": "Nippon & Dulux Products",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Product",
-            "name": "Nippon Odourless AirCare",
-            "url": "https://al-waqas-paints.vercel.app/products/nippon-odourless-aircare",
-            "image": "https://al-waqas-paints.vercel.app/images/nippon-odourless-aircare.jpg",
-            "description": "Premium odourless interior paint by Nippon for a clean and fresh finish.",
-            "sku": "NIP-001",
-            "category": "Interior Paints",
-            "brand": {
-              "@type": "Brand",
-              "name": "Nippon"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "5000",
-              "availability": "http://schema.org/InStock",
-              "url": "https://al-waqas-paints.vercel.app/products/nippon-odourless-aircare"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Product",
-            "name": "Nippon Spot-Less",
-            "url": "https://al-waqas-paints.vercel.app/products/nippon-spot-less",
-            "image": "https://al-waqas-paints.vercel.app/images/nippon-spot-less.jpg",
-            "description": "Stain-resistant interior paint by Nippon for easy maintenance.",
-            "sku": "NIP-002",
-            "category": "Interior Paints",
-            "brand": {
-              "@type": "Brand",
-              "name": "Nippon"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "5500",
-              "availability": "http://schema.org/InStock",
-              "url": "https://al-waqas-paints.vercel.app/products/nippon-spot-less"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Product",
-            "name": "Dulux Ambiance Velvet Touch Diamond Glo",
-            "url": "https://al-waqas-paints.vercel.app/dulux/dulux-ambiance-velvet-touch-diamon-glo",
-            "image": "https://al-waqas-paints.vercel.app/images/dulux-velvet-touch-diamond-glo.jpg",
-            "description": "Luxurious interior paint with a diamond glo finish by Dulux.",
-            "sku": "DUL-001",
-            "category": "Interior Paints",
-            "brand": {
-              "@type": "Brand",
-              "name": "Dulux"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "6000",
-              "availability": "http://schema.org/InStock",
-              "url": "https://al-waqas-paints.vercel.app/dulux/dulux-ambiance-velvet-touch-diamon-glo"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Product",
-            "name": "Nippon Weatherbond",
-            "url": "https://al-waqas-paints.vercel.app/products/nippon-weatherbond",
-            "image": "https://al-waqas-paints.vercel.app/images/nippon-weatherbond.jpg",
-            "description": "Durable exterior paint by Nippon for weather resistance.",
-            "sku": "NIP-003",
-            "category": "Exterior Paints",
-            "brand": {
-              "@type": "Brand",
-              "name": "Nippon"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "7000",
-              "availability": "http://schema.org/InStock",
-              "url": "https://al-waqas-paints.vercel.app/products/nippon-weatherbond"
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "Product",
-            "name": "Dulux EasyCare",
-            "url": "https://al-waqas-paints.vercel.app/dulux/dulux-easycare",
-            "image": "https://al-waqas-paints.vercel.app/images/dulux-easycare.jpg",
-            "description": "Washable interior paint by Dulux with antiviral properties.",
-            "sku": "DUL-002",
-            "category": "Interior Paints",
-            "brand": {
-              "@type": "Brand",
-              "name": "Dulux"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "5800",
-              "availability": "http://schema.org/InStock",
-              "url": "https://al-waqas-paints.vercel.app/dulux/dulux-easycare"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://al-waqas-paints.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://al-waqas-paints.vercel.app/about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Contact Us",
-          "item": "https://al-waqas-paints.vercel.app/contact-us"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Products",
-          "item": "https://al-waqas-paints.vercel.app/products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Interior Paints",
-          "item": "https://al-waqas-paints.vercel.app/products/interior"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Exterior Paints",
-          "item": "https://al-waqas-paints.vercel.app/products/exterior"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Surface Preparation",
-          "item": "https://al-waqas-paints.vercel.app/products/surface-preparation-range"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Wood and Metal",
-          "item": "https://al-waqas-paints.vercel.app/products/wood-and-metal"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Special Surfaces",
-          "item": "https://al-waqas-paints.vercel.app/products/special-surfaces"
-        }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "name": "Al-Waqas Paint",
-      "url": "https://al-waqas-paints.vercel.app",
-      "inLanguage": "en-PK",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://al-waqas-paints.vercel.app/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://al-waqas-paints.vercel.app/about",
-      "url": "https://al-waqas-paints.vercel.app/about",
-      "name": "About Al-Waqas Paint",
-      "description": "Learn about Al-Waqas Paint, your trusted supplier of premium paints and coatings in Islamabad.",
-      "inLanguage": "en-PK",
-      "isPartOf": {
-        "@id": "https://al-waqas-paints.vercel.app/#website"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://al-waqas-paints.vercel.app/contact-us",
-      "url": "https://al-waqas-paints.vercel.app/contact-us",
-      "name": "Contact Al-Waqas Paint",
-      "description": "Get in touch with Al-Waqas Paint for inquiries and support.",
-      "inLanguage": "en-PK",
-      "isPartOf": {
-        "@id": "https://al-waqas-paints.vercel.app/#website"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://al-waqas-paints.vercel.app/products",
-      "url": "https://al-waqas-paints.vercel.app/products",
-      "name": "Products",
-      "description": "Explore our range of Nippon and Dulux paints and coatings.",
-      "inLanguage": "en-PK",
-      "isPartOf": {
-        "@id": "https://al-waqas-paints.vercel.app/#website"
-      }
-    }
-  ]
-};
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Head>
         <title>Al-Waqas Paint | Premium Coatings</title>
         <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Sharplogicians",
-    "url": "https://sharplogicians.com",
-    "logo": "https://sharplogicians.com/logo.png",
-    "description": "Sharplogicians is a top-tier software development company specializing in Magento, WordPress, Next.js, Odoo, Python, and cloud hosting solutions.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1309 Coffeen Avenue STE 1200 Sheridan Wyoming",
-      "addressLocality": "Sheridan",
-      "addressRegion": "Wyoming",
-      "postalCode": "82801",
-      "addressCountry": "USA"
-    },
-    "telephone": "+1 307 460 4411",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": testimonials?.length || "85"
-    },
-    "review": testimonials?.map((job) => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": job?.name || "John Doe"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "datePublished": randomDate || "2024-02-18", // Call the random date function here
-      "reviewBody": job?.title || "Sharplogicians provided exceptional service in developing our Magento-based eCommerce platform. Their expertise is unparalleled!"
-    }))
-  })
-}} />
-
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       <main className="flex-grow">
         {/* Hero Section */}
@@ -394,7 +111,7 @@ const structuredData = {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-900">
+                    <h3 className="text-lg font-semibold text-gray-0 group-hover:text-blue-900">
                       {category.name}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">{category.description}</p>
