@@ -64,7 +64,7 @@ const Navbar = () => {
           <span className="text-white sm:text-sm">Premium Coatings Solution</span>
           <div className="flex space-x-4">
             <a href="tel:+923335093223" className="text-white hover:text-blue-100">+92 3335 093223</a>
-            <a href="mailto:info@sharplogician.com" className="text-white hover:text-blue-100">info@sharplogician.com</a>
+            <a href="mailto:info@alwaqaspaint.com" className="text-white hover:text-blue-100">info@alwaqaspaint.com</a>
           </div>
         </div>
       </div>

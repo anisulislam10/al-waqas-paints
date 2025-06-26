@@ -1,9 +1,8 @@
-// components/Footer.jsx
 import Link from 'next/link';
 
 const Footer = () => {
-  // Product links derived from provided list and Navbar.jsx
-  const productLinks = [
+  // Nippon product links from Navbar.jsx
+  const nipponProductLinks = [
     { name: 'Interior', href: '/products/interior' },
     { name: 'Exterior', href: '/products/exterior' },
     { name: 'Surface Preparation Range', href: '/products/surface-preparation-range' },
@@ -11,23 +10,32 @@ const Footer = () => {
     { name: 'Special Surfaces', href: '/products/special-surfaces' },
   ];
 
+  // Dulux product links from Navbar.jsx
+  const duluxProductLinks = [
+    { name: 'Interior', href: '/dulux/interior' },
+    { name: 'Exterior', href: '/dulux/exterior' },
+    { name: 'Primer', href: '/dulux/primer' },
+    { name: 'Special Product', href: '/dulux/special-product' },
+    { name: 'Waterproofing', href: '/dulux/waterproofing' },
+  ];
+
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* About Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Intro Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4  text-white"> Al-Waqas Paint</h3>
+            <h3 className="text-xl font-semibold mb-4 text-white">Al-Waqas Paint</h3>
             <p className="text-sm text-gray-300">
               Al-Waqas Paint provides premium coating solutions for interior, exterior, and specialty surfaces. With a commitment to quality and innovation, we deliver durable and environmentally friendly products.
             </p>
           </div>
 
-          {/* Products Section */}
+          {/* Nippon Products Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
+            <h3 className="text-lg font-semibold mb-4">Nippon Products</h3>
             <ul className="space-y-2">
-              {productLinks.map((link) => (
+              {nipponProductLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -40,16 +48,33 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Section */}
+          {/* Dulux Products Section */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Dulux Products</h3>
+            <ul className="space-y-2">
+              {duluxProductLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-300 hover:text-blue-100 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Us Section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
                 <a
-                  href="mailto:info@sharplogician.com"
+                  href="mailto:info@alwaqaspaint.com"
                   className="hover:text-blue-100 transition-colors duration-200"
                 >
-                  Email: info@sharplogician.com
+                  Email: info@alwaqaspaint.com
                 </a>
               </li>
               <li>
@@ -101,11 +126,10 @@ const Footer = () => {
           </div>
         </div>
         {/* Copyright Notice */}
-       <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-  © {new Date().getFullYear()} Al-Waqas Paint. All rights reserved. | 
-  Designed by <a href="https://sharplogicians.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Sharplogicians</a>
-</div>
-
+        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+          © {new Date().getFullYear()} Al-Waqas Paint. All rights reserved. | 
+          Designed by <a href="https://sharplogicians.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Sharplogicians</a>
+        </div>
       </div>
     </footer>
   );
