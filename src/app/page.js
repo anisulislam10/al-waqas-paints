@@ -27,10 +27,15 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <Head>
-        <title>Al-Waqas Paint | Premium Coatings</title>
-        <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
- <Script
+     <Head>
+  <title>Al-Waqas Paint | Premium Coatings</title>
+  <meta
+    name="description"
+    content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
+  />
+</Head>
+
+<Script
   id="structured-data"
   type="application/ld+json"
   strategy="beforeInteractive"
@@ -40,35 +45,44 @@ export default function Home() {
       "@type": "LocalBusiness",
       "name": "Al-Waqas Paint",
       "url": "https://al-waqas-paints.vercel.app",
-      "description": "Al-Waqas Paint offers premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability and sustainability.",
+      "description":
+        "Al-Waqas Paint offers premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability and sustainability.",
       "image": "https://al-waqas-paints.vercel.app/logo.png",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road",
+        "streetAddress":
+          "Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road",
         "addressLocality": "Islamabad",
         "addressRegion": "Punjab",
         "postalCode": "44000",
-        "addressCountry": "PK"
+        "addressCountry": "PK",
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": "33.6844",
-        "longitude": "73.0479"
+        "longitude": "73.0479",
       },
       "telephone": "+923335093223",
       "email": "info@alwaqaspaint.com",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
         "opens": "09:00",
-        "closes": "17:00"
+        "closes": "17:00",
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "85",
-        "bestRating": "5"
+        "bestRating": "5",
       },
       "review": [
         {
@@ -76,26 +90,26 @@ export default function Home() {
           "reviewRating": {
             "@type": "Rating",
             "ratingValue": "5",
-            "bestRating": "5"
+            "bestRating": "5",
           },
           "author": {
             "@type": "Person",
-            "name": "Ali Khan"
+            "name": "Ali Khan",
           },
           "datePublished": "2024-02-18",
-          "reviewBody": "Al-Waqas Paint provided excellent quality paints and great customer service!"
-        }
+          "reviewBody":
+            "Al-Waqas Paint provided excellent quality paints and great customer service!",
+        },
       ],
       "sameAs": [
         "https://www.facebook.com/alwaqaspaint",
         "https://twitter.com/alwaqaspaint",
-        "https://instagram.com/alwaqaspaint"
-      ]
-    })
+        "https://instagram.com/alwaqaspaint",
+      ],
+    }),
   }}
 />
-        
-      </Head>
+
       <main className="flex-grow">
         {/* Hero Section */}
         <section
