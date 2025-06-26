@@ -1,6 +1,6 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-
 export default function Home() {
   const productCategories = [
     { name: 'Nippon Interior', image: '/interios.avif', href: '/products/interior', description: 'Eco-friendly, low-VOC paints like Odour-less All-in-1 and MozzieGuard for vibrant, safe interiors.' },
@@ -14,13 +14,99 @@ export default function Home() {
     // { name: 'Tools & Other Items', image: '/tools.webp', href: '/products/tools', description: 'Essential painting tools and accessories.' },
   ];
 
+  // Structured Data for Organization, ItemList, and BreadcrumbList
+const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://al-waqas-paints.vercel.app/#organization",
+        "name": "Al-Waqas Paint",
+        "url": "https://al-waqas-paints.vercel.app",
+        "logo": "https://al-waqas-paints.vercel.app/logo.png",
+        "image": "https://al-waqas-paints.vercel.app/store-front.jpg",
+        "description": "Premium paint and coatings supplier offering Nippon, Dulux, and other quality brands",
+        "priceRange": "$$",
+        "telephone": "+923335093223",
+        "email": "info@alwaqaspaint.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nadir Plaza, Opposite Lignum Tower, DHA 2",
+          "addressLocality": "Islamabad",
+          "addressRegion": "Punjab",
+          "postalCode": "44000",
+          "addressCountry": "PK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "33.6844",
+          "longitude": "73.0479"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/alwaqaspaint",
+          "https://twitter.com/alwaqaspaint",
+          "https://instagram.com/alwaqaspaint"
+        ]
+      },
+      // Keep your existing ItemList and BreadcrumbList
+      {
+        '@type': 'ItemList',
+        'name': 'Nippon & Dulux Products',
+        'itemListElement': productCategories.map((category, index) => ({
+          '@type': 'ListItem',
+          'position': index + 1,
+          'item': {
+            '@type': 'Product',
+            'name': category.name,
+            'url': `https://al-waqas-paints.vercel.app${category.href}`,
+            'image': `https://al-waqas-paints.vercel.app${category.image}`,
+            'description': category.description,
+            'brand': {
+              '@type': 'Brand',
+              'name': category.name.includes('Nippon') ? 'Nippon' : category.name.includes('Dulux') ? 'Dulux' : 'Al-Waqas Paint',
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "PKR",
+              "price": "0",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://al-waqas-paints.vercel.app',
+          },
+        ],
+      }
+    ]
+  };
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
+      <Head>
+        <title>Al-Waqas Paint | Premium Coatings</title>
+        <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <main className="flex-grow">
-       
-
         {/* Hero Section */}
-        <section 
+        <section
           className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/homepage.webp')] bg-cover bg-center relative"
         >
           <div className="absolute inset-0 bg-black/50 z-0"></div>
@@ -34,11 +120,10 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="#product-categories"
-                className="inline-block bg-red-700 text-white px-6 py-3 rounded-md font-medium hover:bg-red-800 transition-colors duration-200"
+                className="inline-block bg-blue-900 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
               >
                 Explore Our Categories
               </a>
-           
             </div>
           </div>
         </section>
@@ -105,7 +190,7 @@ export default function Home() {
           </div>
         </section>
 
-     {/* Contact Section */}
+        {/* Contact Section */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">Get in Touch</h2>
@@ -120,7 +205,7 @@ export default function Home() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
                     </svg>
                     <a href="tel:+923335093223" className="text-black text-lg hover:text-blue-900">
-                     +92 3335 093223
+                      +92 3335 093223
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
@@ -128,7 +213,7 @@ export default function Home() {
                       <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
                     </svg>
                     <a href="mailto:info@alwaqaspaint.com" className="text-black text-lg hover:text-blue-900">
-                    info@alwaqaspaint.com
+                      info@alwaqaspaint.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
@@ -136,7 +221,8 @@ export default function Home() {
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                     </svg>
                     <p className="text-black text-lg">
-                    Nadir Plaza, Opposite Lignum Tower, DHA 2, <br/> Near Al Janat Mall, GT Road, Islamabad, Pakistan                    </p>
+                      Nadir Plaza, Opposite Lignum Tower, DHA 2, <br /> Near Al Janat Mall, GT Road, Islamabad, Pakistan
+                    </p>
                   </div>
                 </div>
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
@@ -151,7 +237,7 @@ export default function Home() {
                   </a>
                   <a
                     href="tel:+923335093223"
-                    className="inline-flex items-center px-6 py-3 bg-green-700 text-white rounded-md font-medium hover:bg-green-800 transition-colors duration-200"
+                    className="inline-flex items-center px-6 py-3 bg-blue-900 text-white rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
