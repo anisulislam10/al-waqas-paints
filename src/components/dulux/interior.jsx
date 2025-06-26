@@ -392,7 +392,7 @@ const DInterior = () => {
       id: 29,
       title: "Dulux Promise Interior Putty",
       category: "Interior",
-      image: "/dulux/29.jfif",
+      image: "/dulux/29.png",
       features: [
         "High Coverage",
         "Comfortable Application",
@@ -418,7 +418,7 @@ const DInterior = () => {
       id: 32,
       title: "Paintex Putty",
       category: "Interior",
-      image: "/dulux/32.jfif",
+      image: "/dulux/32.png",
       features: [
         "Quick Drying",
         "Easy To Apply",
@@ -522,7 +522,7 @@ const DInterior = () => {
       id: 40,
       title: "Paintex Sheesha Putty",
       category: "Interior",
-      image: "/dulux/40.jfif",
+      image: "/dulux/40.png",
       features: [
         "Superior Quality",
         "Seals Stains",
