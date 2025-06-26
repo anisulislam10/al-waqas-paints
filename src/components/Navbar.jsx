@@ -175,7 +175,7 @@ const Navbar = () => {
   >
     <button 
       className={`px-3 py-2 text-sm font-bold flex items-center ${
-        pathname.startsWith("/dulux-products")
+        pathname.startsWith("/dulux")
           ? "text-blue-900 border-b-2 border-blue-900" 
           : "text-gray-700 hover:text-blue-900"
       }`}
@@ -348,7 +348,7 @@ const Navbar = () => {
             <button 
               onClick={() => setIsDuluxProductsOpen(!isDuluxProductsOpen)}
               className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
-                pathname.startsWith("/dulux-products") 
+                pathname.startsWith("/dulux") 
                   ? "text-blue-900 bg-blue-50" 
                   : "text-gray-700 hover:bg-blue-50"
               }`}
@@ -365,7 +365,7 @@ const Navbar = () => {
                   {duluxCategories.map((category) => (
                     <div key={category.name} className="flex flex-col items-center">
                       <Link
-                        href={`/dulux-products/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`/dulux/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                         className={`group block w-full ${
                           isDuluxCategoryActive(category.name) ? "ring-2 ring-blue-900 rounded-lg" : ""
                         }`}

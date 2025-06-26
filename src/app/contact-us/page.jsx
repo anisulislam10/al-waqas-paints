@@ -44,7 +44,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Info and Map */}
-        <section className="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
+        <section className="container px-22 py-16 grid md:grid-cols-2 gap-1">
           {/* Contact Information */}
           <div>
             <h2 className="text-3xl font-semibold mb-6 text-black">Get in Touch</h2>
