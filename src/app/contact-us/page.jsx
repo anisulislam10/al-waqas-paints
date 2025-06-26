@@ -12,7 +12,7 @@ export default function ContactPage() {
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-20">
+        <section className="min-h-[50vh] flex items-center justify-center bg-[url('/bg_about_conver.jpg')] bg-cover bg-center relative text-white">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">

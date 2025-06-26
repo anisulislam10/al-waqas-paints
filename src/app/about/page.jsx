@@ -25,10 +25,8 @@ export default function About() {
       <main className="flex-grow">
         {/* Header Section */}
         <section
-          className="min-h-[60vh] flex items-center justify-center bg-[url('/about-hero.jpg')] bg-cover bg-center relative text-white"
-        >
-          <div className="absolute inset-0 bg-blue-900 z-0"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+className="min-h-[60vh] flex items-center justify-center bg-[url('/bg_about_conver.jpg')] bg-cover bg-center relative text-white"        >
+          <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
               About Al-Waqas Paint
             </h1>
@@ -69,7 +67,7 @@ export default function About() {
             </h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 w-full">
-                <div className="text-lg text-gray-600 leading-relaxed">
+                <div className=" text-gray-600 leading-relaxed text-xl">
                   <p>
                     Al-Waqas Paint is a trusted name in premium, eco-conscious coating solutions—redefining how spaces look and feel. Driven by a passion for excellence, we craft innovative paints for interiors, exteriors, and specialized surfaces, offering exceptional durability and elegant finishes.<br/><br/>
                     Our low-VOC, environmentally friendly formulations reflect our deep commitment to sustainability, helping reduce environmental impact without compromising performance. By blending advanced technology with timeless craftsmanship, Al-Waqas Paint delivers lasting beauty and protection—enhancing homes and businesses across the globe.
