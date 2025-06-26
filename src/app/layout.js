@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from './../components/Navbar'
+import Script from "next/script"; // Import Script from next
+import Navbar from './../components/Navbar';
 import "./globals.css";
 import Footer from "@/components/Footer";
 
@@ -17,20 +18,34 @@ export const metadata = {
   title: "Al Waqas Paint",
   description: "Al Waqas Paint",
   icons: {
-    icon: '/favicon.ico', 
+    icon: '/favicon.ico',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Google Analytics Scripts */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-0D7GJ1FJLE"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0D7GJ1FJLE');
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <Navbar />
+        <Navbar />
         {children}
-
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
