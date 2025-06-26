@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -69,8 +70,102 @@ const Interior = () => {
     },
   ];
 
+  // Structured data for the /products/interior page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://al-waqas-paints.vercel.app/products/interior/#webpage",
+        "url": "https://al-waqas-paints.vercel.app/products/interior",
+        "name": "Interior Paints | Al-Waqas Paint",
+        "description": "Explore our range of water-based matt emulsion interior paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, and Glamour.",
+        "inLanguage": "en-PK",
+        "isPartOf": {
+          "@id": "https://al-waqas-paints.vercel.app/#website"
+        },
+        "publisher": {
+          "@id": "https://al-waqas-paints.vercel.app/#organization"
+        },
+        "breadcrumb": {
+          "@id": "https://al-waqas-paints.vercel.app/products/interior/#breadcrumb"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Water Based Matt Emulsion Paints",
+        "itemListElement": interiorProducts.map((product, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Product",
+            "name": product.title,
+            "url": `https://al-waqas-paints.vercel.app${product.detailsLink}`,
+            "image": `https://al-waqas-paints.vercel.app${product.image}`,
+            "description": `Premium ${product.title} interior paint by Nippon for durable and vibrant finishes.`,
+            "sku": `NIP-${String(product.id).padStart(3, "0")}`,
+            "category": "Interior Paints",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nippon"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "PKR",
+              "price": product.id === 1 ? "5000" : product.id === 2 ? "5500" : product.id === 3 ? "5200" : "5300", // Placeholder prices
+              "availability": "http://schema.org/InStock",
+              "url": `https://al-waqas-paints.vercel.app${product.detailsLink}`
+            }
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://al-waqas-paints.vercel.app/products/interior/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://al-waqas-paints.vercel.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://al-waqas-paints.vercel.app/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Interior",
+            "item": "https://al-waqas-paints.vercel.app/products/interior"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Water Based Matt Emulsion",
+            "item": "https://al-waqas-paints.vercel.app/products/interior"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8">
+      <Head>
+        <title>Interior Paints | Al-Waqas Paint</title>
+        <meta
+          name="description"
+          content="Explore our range of water-based matt emulsion interior paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, and Glamour."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
+
       {/* Breadcrumb Navigation */}
       <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">

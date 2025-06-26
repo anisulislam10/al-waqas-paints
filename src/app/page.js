@@ -309,9 +309,10 @@ const structuredData = {
       <Head>
         <title>Al-Waqas Paint | Premium Coatings</title>
         <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData, null, 2)}
-        </script>
+    <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       <main className="flex-grow">
         {/* Hero Section */}
