@@ -309,10 +309,45 @@ const structuredData = {
       <Head>
         <title>Al-Waqas Paint | Premium Coatings</title>
         <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
-    <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+  __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sharplogicians",
+    "url": "https://sharplogicians.com",
+    "logo": "https://sharplogicians.com/logo.png",
+    "description": "Sharplogicians is a top-tier software development company specializing in Magento, WordPress, Next.js, Odoo, Python, and cloud hosting solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1309 Coffeen Avenue STE 1200 Sheridan Wyoming",
+      "addressLocality": "Sheridan",
+      "addressRegion": "Wyoming",
+      "postalCode": "82801",
+      "addressCountry": "USA"
+    },
+    "telephone": "+1 307 460 4411",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": testimonials?.length || "85"
+    },
+    "review": testimonials?.map((job) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": job?.name || "John Doe"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": randomDate || "2024-02-18", // Call the random date function here
+      "reviewBody": job?.title || "Sharplogicians provided exceptional service in developing our Magento-based eCommerce platform. Their expertise is unparalleled!"
+    }))
+  })
+}} />
+
       </Head>
       <main className="flex-grow">
         {/* Hero Section */}
