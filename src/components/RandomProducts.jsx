@@ -133,7 +133,7 @@ const YouMayAlsoLike = () => {
 
                 {/* Call Now Button */}
                 <a href="tel:+923335093223">
-                  <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
+                  <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
                     Call Now
                   </button>
                 </a>

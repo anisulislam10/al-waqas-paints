@@ -1,4 +1,3 @@
-// components/Interior.jsx
 "use client";
 
 import Link from "next/link";
@@ -57,7 +56,7 @@ const SurfacePrep = () => {
       titleLink: "/products/interior/washable-paint-details"
     },
      {
-      id: 4,
+      id: 5,
       title: "Nippon Red Oxide Primer",
       category: "Surface Preparation Range",
       image: "/Red-oxide-1.png",
@@ -65,7 +64,7 @@ const SurfacePrep = () => {
       titleLink: "/products/interior/washable-paint-details"
     },
      {
-      id: 4,
+      id: 6,
       title: "Nippon Quality Primer",
       category: "Surface Preparation Range",
       image: "/Q-Primer-Edited.png",
@@ -73,7 +72,7 @@ const SurfacePrep = () => {
       titleLink: "/products/interior/washable-paint-details"
     },
      {
-      id: 4,
+      id: 7,
       title: "Nippon Q Seal Primer",
       category: "Surface Preparation Range",
       image: "/Q-Seal-Solvent-Based-Primer-min.png",
@@ -91,20 +90,39 @@ const SurfacePrep = () => {
         "Nippon Quality Primer",
         "Nippon Vinilex 5200 Wall Sealer",
         "Nippon Red Oxide Primer",
-                "Nippon Hi-Bond Wall Primer",
-                                "Nippon Vinilex 5100 Wall Sealer",
-                                "Nippon Expresskote Sealer",
-
-
-
+        "Nippon Hi-Bond Wall Primer",
+        "Nippon Vinilex 5100 Wall Sealer",
+        "Nippon Expresskote Sealer",
       ],
       key: "waterBased"
     },
-    
   ];
 
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8">
+      {/* Breadcrumb Navigation */}
+      <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
+        <ol className="flex items-center space-x-2 text-sm text-gray-500">
+          <li>
+            <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
+              Home
+            </Link>
+          </li>
+          <li className="flex items-center">
+            <svg
+              className="w-4 h-4 mx-1 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-gray-700 font-medium">Primers/Sealers</span>
+          </li>
+        </ol>
+      </nav>
+
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Sidebar */}
         <div className="w-full md:w-64 flex-shrink-0">
@@ -152,7 +170,7 @@ const SurfacePrep = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {interiorProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300  ">
+              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 {/* Product Image - Links to details page */}
                 <Link href={product.detailsLink} className="block">
                   <div className="relative h-48 w-full">
@@ -178,11 +196,11 @@ const SurfacePrep = () => {
                   <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
                   
                   {/* Buy Now Button */}
-               <a href="tel:+923335093223">
-  <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
-    Call Now
-  </button>
-</a>
+                  <a href="tel:+923335093223">
+                    <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
+                      Call Now
+                    </button>
+                  </a>
                 </div>
               </div>
             ))}

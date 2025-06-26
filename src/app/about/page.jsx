@@ -1,5 +1,3 @@
-
-// app/about/page.jsx
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -37,42 +35,61 @@ export default function About() {
             <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
               Transforming spaces with premium, eco-friendly coatings. Discover our passion for quality and innovation.
             </p>
-            
+            {/* Breadcrumb Navigation */}
+            <nav className="flex p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb ">
+              <ol className="flex items-center space-x-2 text-sm text-white">
+                <li>
+                  <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
+                    Home
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                  <svg
+                    className="w-4 h-4 mx-1 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span className="text-white font-medium ">About</span>
+                </li>
+              </ol>
+            </nav>
           </div>
         </section>
 
         {/* About Al-Waqas Paint Section */}
-       <section id="about-us" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8 relative">
-          Who We Are
-          <span className="absolute bottom-0 left-1/2 w-16 h-1 bg-red-700 transform -translate-x-1/2"></span>
-        </h2>
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          <div className="lg:w-1/2 w-full">
-            <div className="text-lg text-gray-600 leading-relaxed">
-              <p>
-
-Al-Waqas Paint is a trusted name in premium, eco-conscious coating solutions—redefining how spaces look and feel. Driven by a passion for excellence, we craft innovative paints for interiors, exteriors, and specialized surfaces, offering exceptional durability and elegant finishes.<br/><br/>
-
-Our low-VOC, environmentally friendly formulations reflect our deep commitment to sustainability, helping reduce environmental impact without compromising performance. By blending advanced technology with timeless craftsmanship, Al-Waqas Paint delivers lasting beauty and protection—enhancing homes and businesses across the globe.
-              </p>
+        <section id="about-us" className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-8 relative">
+              Who We Are
+              <span className="absolute bottom-0 left-1/2 w-16 h-1 bg-red-700 transform -translate-x-1/2"></span>
+            </h2>
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="lg:w-1/2 w-full">
+                <div className="text-lg text-gray-600 leading-relaxed">
+                  <p>
+                    Al-Waqas Paint is a trusted name in premium, eco-conscious coating solutions—redefining how spaces look and feel. Driven by a passion for excellence, we craft innovative paints for interiors, exteriors, and specialized surfaces, offering exceptional durability and elegant finishes.<br/><br/>
+                    Our low-VOC, environmentally friendly formulations reflect our deep commitment to sustainability, helping reduce environmental impact without compromising performance. By blending advanced technology with timeless craftsmanship, Al-Waqas Paint delivers lasting beauty and protection—enhancing homes and businesses across the globe.
+                  </p>
+                </div>
+              </div>
+              <div className="lg:w-1/2 w-full">
+                <Image
+                  src="/about.png"
+                  alt="Al-Waqas Paint craftsmanship"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-contain w-full h-[400px]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
-          <div className="lg:w-1/2 w-full">
-            <Image
-              src="/about.png"
-              alt="Al-Waqas Paint craftsmanship"
-              width={600}
-              height={400}
-              className="rounded-lg object-contain w-full h-[400px]"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
         {/* Our Values Section */}
         <section className="py-16 bg-gradient-to-b from-gray-100 to-white">
@@ -108,7 +125,7 @@ Our low-VOC, environmentally friendly formulations reflect our deep commitment t
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center px-8 py-4 bg-red-700 rounded-full font-semibold hover:bg-red-600 transition-colors duration-300"
+                className="inline-flex items-center px-8 py-4 bg-green-700 rounded-full font-semibold hover:bg-green-800 transition-colors duration-300"
               >
                 Contact Us
               </Link>
@@ -116,7 +133,13 @@ Our low-VOC, environmentally friendly formulations reflect our deep commitment t
                 href="/products/interior"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
               >
-                Explore Products
+                Explore Nippon Products
+              </Link>
+              <Link
+                href="/dulux/interior"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              >
+                Explore Dulux Products
               </Link>
             </div>
           </div>

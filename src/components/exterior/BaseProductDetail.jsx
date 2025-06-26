@@ -61,7 +61,7 @@ const BaseProductDetailExterios = ({
             {/* Action Buttons */}
             <div className="p-4 space-y-3 bg-white border-t border-gray-200">
              <a href="tel:+923335093223">
-  <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
+  <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
     Call Now
   </button>
 </a>
@@ -76,7 +76,7 @@ const BaseProductDetailExterios = ({
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    TDS
+                    TD
                   </Link>
                 )}
                 

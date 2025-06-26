@@ -55,6 +55,31 @@ const SpecialSurfaces = () => {
 
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8">
+      {/* Breadcrumb Navigation */}
+      <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
+        <ol className="flex items-center space-x-2 text-sm text-gray-500">
+          <li>
+            <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
+              Home
+            </Link>
+          </li>
+          <li className="flex items-center">
+            <svg
+              className="w-4 h-4 mx-1 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <Link href="/products/special-surfaces/overview" className="hover:text-blue-600 transition-colors font-medium">
+              Special Surfaces
+            </Link>
+          </li>
+        </ol>
+      </nav>
+
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Sidebar */}
         <div className="w-full md:w-64 flex-shrink-0">
@@ -132,7 +157,7 @@ const SpecialSurfaces = () => {
 
                   {/* Buy Now Button */}
                   <a href="tel:+923335093223">
-                    <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md hover:bg-red-900 transition-colors">
+                    <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
                       Call Now
                     </button>
                   </a>
