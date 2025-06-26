@@ -160,12 +160,12 @@ const Interior = () => {
           name="description"
           content="Explore our range of water-based matt emulsion interior paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, and Glamour."
         />
-        <script
+        
+      </Head>
+<script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </Head>
-
       {/* Breadcrumb Navigation */}
       <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">
