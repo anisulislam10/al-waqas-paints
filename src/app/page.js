@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+
 export default function Home() {
   const productCategories = [
     { name: 'Nippon Interior', image: '/interios.avif', href: '/products/interior', description: 'Eco-friendly, low-VOC paints like Odour-less All-in-1 and MozzieGuard for vibrant, safe interiors.' },
@@ -11,11 +12,9 @@ export default function Home() {
     { name: 'Dulux Special Products', image: '/dulux-special.jpg', href: '/dulux/special-product', description: 'Decorative concrete and specialty coatings for creative finishes.' },
     { name: 'Surface Preparation Range', image: '/our-interior-painting-services.jpg', href: '/products/surface-preparation-range', description: 'Primers and sealers for flawless paint application.' },
     { name: 'Wood and Metal', image: '/wood.webp', href: '/products/wood-and-metal', description: 'Durable coatings for wood and metal surfaces.' },
-    // { name: 'Tools & Other Items', image: '/tools.webp', href: '/products/tools', description: 'Essential painting tools and accessories.' },
   ];
 
-  // Structured Data for Organization, ItemList, and BreadcrumbList
-const structuredData = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -54,55 +53,47 @@ const structuredData = {
           "https://instagram.com/alwaqaspaint"
         ]
       },
-      // Keep your existing ItemList and BreadcrumbList
       {
-        '@type': 'ItemList',
-        'name': 'Nippon & Dulux Products',
-        'itemListElement': productCategories.map((category, index) => ({
-          '@type': 'ListItem',
-          'position': index + 1,
-          'item': {
-            '@type': 'Product',
-            'name': category.name,
-            'url': `https://al-waqas-paints.vercel.app${category.href}`,
-            'image': `https://al-waqas-paints.vercel.app${category.image}`,
-            'description': category.description,
-            'brand': {
-              '@type': 'Brand',
-              'name': category.name.includes('Nippon') ? 'Nippon' : category.name.includes('Dulux') ? 'Dulux' : 'Al-Waqas Paint',
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "PKR",
-              "price": "0",
-              "priceValidUntil": "2025-12-31",
-              "availability": "https://schema.org/InStock"
+        "@type": "ItemList",
+        "name": "Nippon & Dulux Products",
+        "itemListElement": productCategories.map((category, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Product",
+            "name": category.name,
+            "url": `https://al-waqas-paints.vercel.app${category.href}`,
+            "image": `https://al-waqas-paints.vercel.app${category.image}`,
+            "description": category.description,
+            "brand": {
+              "@type": "Brand",
+              "name": category.name.includes('Nippon') ? 'Nippon' : category.name.includes('Dulux') ? 'Dulux' : 'Al-Waqas Paint'
             }
           }
         }))
       },
       {
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
+        "@type": "BreadcrumbList",
+        "itemListElement": [
           {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Home',
-            'item': 'https://al-waqas-paints.vercel.app',
-          },
-        ],
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://al-waqas-paints.vercel.app"
+          }
+        ]
       }
     ]
   };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Head>
         <title>Al-Waqas Paint | Premium Coatings</title>
         <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData, null, 2)}
+        </script>
       </Head>
       <main className="flex-grow">
         {/* Hero Section */}
