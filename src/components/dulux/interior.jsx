@@ -353,7 +353,7 @@ const DInterior = () => {
       id: 26,
       title: "Paintex Star Semi-Plastic Emulsion",
       category: "Interior",
-      image: "/dulux/26.jfif",
+      image: "/dulux/26.png",
       features: [
         "Improved Hiding Power",
         "Smooth Matt Finish",
