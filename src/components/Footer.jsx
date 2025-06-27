@@ -24,7 +24,7 @@ const Footer = () => {
     {
       name: 'Islamabad Main Branch',
       address: 'Shop 1 & 2, Raja Plaza, Duhma Patak Ternol, Islamabad, Pakistan',
-      phones: ['+923003452434', '+92512227322'],
+      phones: ['+923003452434', '0512227322'],
       email: 'info@alwaqaspaint.com',
     },
     {
@@ -36,7 +36,7 @@ const Footer = () => {
     {
       name: 'DHA Islamabad Branch',
       address: 'Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad, Pakistan',
-      phones: ['+923335093223', '+92515709115'],
+      phones: ['+923335093223', '0515709115'],
       email: 'info@alwaqaspaint.com',
     },
   ];
