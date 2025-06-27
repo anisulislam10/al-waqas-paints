@@ -158,7 +158,7 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <section
-          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/Homepage_Video_Banner_1920x1080_V1.webp')] bg-cover bg-center relative"
+          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/bg_gif-.gif')] bg-cover bg-center relative"
         >
           <div className="absolute inset-0 bg-black/50 z-0"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
