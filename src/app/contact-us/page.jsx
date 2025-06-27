@@ -16,17 +16,9 @@ export default function ContactPage() {
       mapUrl: "https://maps.google.com/?q=Shop+1+%26+2,+Raja+Plaza,+Duhma+Patak+Ternol,+Islamabad",
       coords: "33.6844,73.0479"
     },
+
     {
       id: 2,
-      name: "Rawat Branch",
-      address: "Dhoke Major Stop Kallar Road, Rawat",
-      phone: "0317-4701826",
-      email: "info@alwaqaspaint.com",
-      mapUrl: "https://maps.google.com/?q=Dhoke+Major+Stop+Kallar+Road,+Rawat",
-      coords: "33.4986,73.1995"
-    },
-    {
-      id: 3,
       name: "DHA Islamabad Branch",
       address: "Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad",
       phone: "0333 5093223",
@@ -34,7 +26,15 @@ export default function ContactPage() {
       email: "info@alwaqaspaint.com",
       mapUrl: "https://maps.google.com/?q=Nadir+Plaza,+Opposite+Lignum+Tower,+DHA+2,+Islamabad",
       coords: "33.5678,73.0567"
-    }
+    },    {
+      id: 3,
+      name: "Rawat Branch",
+      address: "Dhoke Major Stop Kallar Road, Rawat",
+      phone: "0317-4701826",
+      email: "info@alwaqaspaint.com",
+      mapUrl: "https://maps.google.com/?q=Dhoke+Major+Stop+Kallar+Road,+Rawat",
+      coords: "33.4986,73.1995"
+    },
   ];
 
   return (

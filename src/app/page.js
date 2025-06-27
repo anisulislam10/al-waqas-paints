@@ -290,41 +290,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Branch 2 */}
+ {/* Branch 2 */}
       <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
         <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 2</h3>
-        <div className="space-y-3">
-          <div className="flex items-start gap-3">
-            <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-            </svg>
-            <p className="text-gray-700">
-              Dhoke Major Stop Kallar Road, Rawat
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
-            </svg>
-            <a href="tel:03174701826" className="text-gray-700 hover:text-blue-900">
-              0317-4701826
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
-            </svg>
-            <a href="mailto:info@alwaqaspaint.com" className="text-gray-700 hover:text-blue-900">
-              info@alwaqaspaint.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Branch 3 */}
-      <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
-        <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 3</h3>
         <div className="space-y-3">
           <div className="flex items-start gap-3">
             <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -360,6 +328,38 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Branch 3 */}
+      <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
+        <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 3</h3>
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <p className="text-gray-700">
+              Dhoke Major Stop Kallar Road, Rawat
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:03174701826" className="text-gray-700 hover:text-blue-900">
+              0317-4701826
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
+            </svg>
+            <a href="mailto:info@alwaqaspaint.com" className="text-gray-700 hover:text-blue-900">
+              info@alwaqaspaint.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+     
     </div>
   </div>
 </section>

@@ -27,16 +27,16 @@ const Footer = () => {
       phones: ['+923003452434', '0512227322'],
       email: 'info@alwaqaspaint.com',
     },
-    {
-      name: 'Rawat Branch',
-      address: 'Dhoke Major Stop Kallar Road, Rawat, Pakistan',
-      phones: ['+923174701826'],
-      email: 'info@alwaqaspaint.com',
-    },
+   
     {
       name: 'DHA Islamabad Branch',
       address: 'Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad, Pakistan',
       phones: ['+923335093223', '0515709115'],
+      email: 'info@alwaqaspaint.com',
+    }, {
+      name: 'Rawat Branch',
+      address: 'Dhoke Major Stop Kallar Road, Rawat, Pakistan',
+      phones: ['+923174701826'],
       email: 'info@alwaqaspaint.com',
     },
   ];
