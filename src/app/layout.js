@@ -38,11 +38,8 @@ const WhatsAppIcon = () => (
 );
 
 export default function RootLayout({ children }) {
-  // WhatsApp phone number (replace with your number, including country code)
-  const whatsappNumber = "+923439275550";
-  // Optional predefined message
+  const whatsappNumber = "+923335093223";
   const whatsappMessage = "Hello, I have a query about Al Waqas Paint!";
-  // WhatsApp URL
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -91,9 +88,9 @@ export default function RootLayout({ children }) {
             style={{
               position: "fixed",
               bottom: "20px",
-              left: "20px", // Position on the left side
+              left: "20px", 
               zIndex: 1000,
-              backgroundColor: "#25D366", // WhatsApp green
+              backgroundColor: "#25D366", 
               borderRadius: "50%",
               padding: "12px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
