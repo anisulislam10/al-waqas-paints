@@ -197,75 +197,127 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">Get in Touch</h2>
-            <p className="text-lg text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Need help choosing the perfect Nippon or Dulux paint? Reach out to our team for expert guidance.
+<section className="py-12 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Branches Section */}
+    <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">Our Branches</h2>
+    <p className="text-lg text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+      Visit us at any of our convenient locations across Islamabad and Rawat
+    </p>
+
+    {/* Horizontal Layout for Branches */}
+    <div className="flex flex-col lg:flex-row items-stretch gap-8">
+      {/* Branch 1 */}
+      <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
+        <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 1</h3>
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <p className="text-gray-700">
+              Shop 1 & 2, Raja Plaza, Duhma Patak Ternol Islamabad
             </p>
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="lg:w-1/2 w-full">
-                <div className="space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
-                    </svg>
-                    <a href="tel:+923335093223" className="text-black text-lg hover:text-blue-900">
-                      +92 3335 093223
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
-                    </svg>
-                    <a href="mailto:info@alwaqaspaint.com" className="text-black text-lg hover:text-blue-900">
-                      info@alwaqaspaint.com
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg>
-                    <p className="text-black text-lg">
-                      Nadir Plaza, Opposite Lignum Tower, DHA 2, <br /> Near Al Janat Mall, GT Road, Islamabad, Pakistan
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="mailto:info@alwaqaspaint.com"
-                    className="inline-flex items-center px-6 py-3 bg-blue-900 text-white rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
-                  >
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
-                    </svg>
-                    Email Us
-                  </a>
-                  <a
-                    href="tel:+923335093223"
-                    className="inline-flex items-center px-6 py-3 bg-blue-900 text-white rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
-                  >
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
-                    </svg>
-                    Call Us
-                  </a>
-                </div>
-              </div>
-              <div className="lg:w-1/2 w-full">
-                <Image
-                  src="/get.png"
-                  alt="Contact Al-Waqas Paint"
-                  width={500}
-                  height={300}
-                  className="rounded-lg object-contain w-full h-[500px]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={false}
-                />
-              </div>
-            </div>
           </div>
-        </section>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:03003452434" className="text-gray-700 hover:text-blue-900">
+              0300 3452434
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:0512227322" className="text-gray-700 hover:text-blue-900">
+              051-2227322 (Landline)
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
+            </svg>
+            <a href="mailto:info@alwaqaspaint.com" className="text-gray-700 hover:text-blue-900">
+              info@alwaqaspaint.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Branch 2 */}
+      <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
+        <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 2</h3>
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <p className="text-gray-700">
+              Dhoke Major Stop Kallar Road, Rawat
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:03174701826" className="text-gray-700 hover:text-blue-900">
+              0317-4701826
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
+            </svg>
+            <a href="mailto:info@alwaqaspaint.com" className="text-gray-700 hover:text-blue-900">
+              info@alwaqaspaint.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Branch 3 */}
+      <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
+        <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 3</h3>
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <p className="text-gray-700">
+              Nadir Plaza, Opposite Lignum Tower, DHA 2,Near Al Janat Mall, GT Road, Islamabad
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:03335093223" className="text-gray-700 hover:text-blue-900">
+              0333 5093223
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:0515709115" className="text-gray-700 hover:text-blue-900">
+              051-5709115 (Landline)
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.8 2L12 11.4 4.8 6h14.4zM4 18V7.6l7.3 5.5c.4.3.9.3 1.3 0L20 7.6V18H4z" />
+            </svg>
+            <a href="mailto:info@alwaqaspaint.com" className="text-gray-700 hover:text-blue-900">
+              info@alwaqaspaint.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
     </div>
   );
