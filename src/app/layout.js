@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         
-      <iframe
+      {/* <iframe
         src="https://custom-gpt-backend-sigma.vercel.app/api/chatbot/685d970d0171245b663f571d/6839dd2c1930b4d886aad753?domain=https%3A%2F%2Fwww.alwaqaspaint.com"
         style={{
                     width: '400px',
@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
                   }}
                   allowTransparency="true"
                   title="Chatbot"
-      ></iframe>
+      ></iframe> */}
     
         <Footer />
       </body>
