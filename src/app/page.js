@@ -155,7 +155,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-0 group-hover:text-blue-900">
+                    <h3 className="text-lg font-semibold text-blue-800 group-hover:text-blue-900">
                       {category.name}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">{category.description}</p>
