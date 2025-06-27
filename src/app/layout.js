@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
                     position: 'fixed',
                     bottom: '20px',
                     right: '20px',
-                    zIndex: 1000,
+                    zIndex: 40,
                   }}
                   allowTransparency="true"
                   title="Chatbot"
