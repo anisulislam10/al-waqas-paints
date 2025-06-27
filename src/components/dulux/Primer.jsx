@@ -104,7 +104,7 @@ const DPrimer = () => {
       id: 7,
       title: "Dulux Promise Primer Primer",
       category: "Primer",
-      image: "/dulux/primer/7.jfif",
+      image: "/dulux/primer/7.png",
       features: [
         "Alkali Resistant",
         "Excellent Adhesion",
