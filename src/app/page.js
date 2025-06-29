@@ -158,41 +158,27 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
       {/* Hero Section */}
-<section className="relative bg-blue-900 text-white w-full h-screen flex items-center justify-center overflow-hidden">
-  {/* YouTube Video Background */}
-  <iframe
-  width="1600" 
-  height="900" 
-    className="absolute"
-    src="https://www.youtube.com/embed/lL_D7yRsBeE?autoplay=1&mute=1&controls=0&loop=1&playlist=lL_D7yRsBeE&modestbranding=1&showinfo=0&rel=0"
-    title="Al-Waqas Hero Background"
-    frameBorder="0"
-    allow="autoplay; fullscreen; encrypted-media"
-    allowFullScreen
-  ></iframe>
-
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50 z-0"></div>
-
-  {/* Hero Content */}
-  <div className="relative z-10 max-full sm:px-6 lg:px-8 text-center md:text-left">
-    <h1 className="text-4xl md:text-5xl font-bold mb-4">
-      Elevate Your Spaces with Al-Waqas Paint
-    </h1>
-    <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto md:mx-0">
-      Discover premium, eco-friendly Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability, style, and sustainability.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-      <a
-        href="#product-categories"
-        className="inline-block bg-blue-900 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors duration-200"
-      >
-        Explore Our Categories
-      </a>
-    </div>
-  </div>
-</section>
-
+   <section
+          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/pexels-pixabay-276724.jpg')] bg-cover bg-center relative"
+        >
+          <div className="absolute inset-0 bg-black/50 z-0"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Elevate Your Spaces with Al-Waqas Paint
+            </h1>
+            <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto md:mx-0">
+              Discover premium, eco-friendly Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability, style, and sustainability.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a
+                href="#product-categories"
+                className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-medium hover:bg-red-900 transition-colors duration-200"
+              >
+                Explore Our Categories
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Product Categories Section */}
         <section id="product-categories" className="py-12 bg-white">
