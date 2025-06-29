@@ -159,7 +159,7 @@ export default function Home() {
         {/* Hero Section */}
       {/* Hero Section */}
    <section
-          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/pexels-pixabay-276724.jpg')] bg-cover bg-center relative"
+          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/pexels-pixabay-276724.webp')] bg-cover bg-center relative"
         >
           <div className="absolute inset-0 bg-black/50 z-0"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
