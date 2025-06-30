@@ -27,14 +27,17 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-     <Head>
-  <title>Al-Waqas Paint | Premium Coatings</title>
-  <meta
-    name="description"
-    content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
-  />
-  <meta name="google-site-verification" content="OKgEj979FUP2uM4YpOCngAKYTlaFD-uTz7TiZOTD9Fg" />
-</Head>
+    <Head>
+        <title>Al-Waqas Paint | Premium Coatings</title>
+        <meta
+          name="description"
+          content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
+        />
+        <meta 
+          name="google-site-verification" 
+          content="OKgEj979FUP2uM4YpOCngAKYTlaFD-uTz7TiZOTD9Fg" 
+        />
+      </Head>
 
 <Script
   id="structured-data"
