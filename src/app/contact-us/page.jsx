@@ -13,7 +13,7 @@ export default function ContactPage() {
       phone: "0300 3452434",
       landline: "051-2227322",
       email: "info@alwaqaspaint.com",
-      mapUrl: "https://maps.google.com/?q=Shop+1+%26+2,+Raja+Plaza,+Duhma+Patak+Ternol,+Islamabad",
+      mapUrl: "https://maps.app.goo.gl/6cTvyJ6G22eJr3kNA",
       coords: "33.6844,73.0479"
     },
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
       phone: "0333 5093223",
       landline: "051-5709115",
       email: "info@alwaqaspaint.com",
-      mapUrl: "https://maps.google.com/?q=Nadir+Plaza,+Opposite+Lignum+Tower,+DHA+2,+Islamabad",
+      mapUrl: "https://www.google.com/maps/place/33%C2%B031%2721.1%22N+73%C2%B008%2750.1%22E/@33.5225214,73.1423731,713m/data=!3m2!1e3!4b1!4m12!1m7!3m6!1s0x38df99955970a55b:0xe3f90d4e3efe16c8!2zQWwtIFdhcWFzIFBhaW50ICYgSGFyZHdhcmUg2KfZhNmI2YLYp9i1INm-24zZhtm5INin24zZhtqIINq-2KfYsdqI2YjbjNim2LE!8m2!3d33.6040812!4d72.8511801!16s%2Fg%2F11rcx2lvf9!3m3!8m2!3d33.522517!4d73.147244!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D",
       coords: "33.5678,73.0567"
     },    {
       id: 3,
@@ -32,7 +32,7 @@ export default function ContactPage() {
       address: "Dhoke Major Stop Kallar Road, Rawat",
       phone: "0317-4701826",
       email: "info@alwaqaspaint.com",
-      mapUrl: "https://maps.google.com/?q=Dhoke+Major+Stop+Kallar+Road,+Rawat",
+      mapUrl: "https://maps.app.goo.gl/uE3cKxExHSLuyNoa6",
       coords: "33.4986,73.1995"
     },
   ];
