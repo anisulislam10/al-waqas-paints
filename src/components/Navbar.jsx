@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 "use client";
 
 import Link from "next/link";
@@ -10,6 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isNipponProductsOpen, setIsNipponProductsOpen] = useState(false);
   const [isDuluxProductsOpen, setIsDuluxProductsOpen] = useState(false);
+  const [isMasterProductsOpen, setIsMasterProductsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeNav, setActiveNav] = useState("");
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +32,15 @@ const Navbar = () => {
     { name: "Waterproofing", image: "/dulux-waterproffing.jpg" },
   ];
 
+  // Master product categories
+  const masterCategories = [
+    { name: "Interior", image: "/master/navbar/master-interior-1.webp" },
+    { name: "Exterior", image: "/master/navbar/master-exterior.webp" },
+    { name: "Base Preparations", image: "/master/navbar/master-surface_prep.webp" },
+    { name: "Wood Finishes", image: "/master/navbar/master-wood.webp" },
+    { name: "Metal Finishes", image: "/master/navbar/master-metal.webp" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -43,7 +52,7 @@ const Navbar = () => {
   useEffect(() => {
     if (pathname === "/") setActiveNav("home");
     else if (pathname === "/about") setActiveNav("about");
-    else if (pathname.startsWith("/products") || pathname.startsWith("/dulux")) setActiveNav("products");
+    else if (pathname.startsWith("/products") || pathname.startsWith("/dulux") || pathname.startsWith("/master")) setActiveNav("products");
   }, [pathname]);
 
   const isNipponCategoryActive = (categoryName) => {
@@ -52,6 +61,10 @@ const Navbar = () => {
 
   const isDuluxCategoryActive = (categoryName) => {
     return pathname === `/dulux/${categoryName.toLowerCase().replace(/\s+/g, "-")}`;
+  };
+
+  const isMasterCategoryActive = (categoryName) => {
+    return pathname === `/master/${categoryName.toLowerCase().replace(/\s+/g, "-")}`;
   };
 
   return (
@@ -75,19 +88,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-15">
           {/* Logo */}
-       {/* Logo with text */}
-<Link href="/" className="flex items-center space-x-2">
-  {/* Logo Image */}
-  <Image 
-    src="/logoal-.png" 
-    alt="Al-Waqas Paint Logo"
-    width={150}
-    height={60}
-    className="rounded-full"
-  />
-
- 
-</Link>
+          <Link href="/" className="flex items-center space-x-2">
+            <Image 
+              src="/logoal-.png" 
+              alt="Al-Waqas Paint Logo"
+              width={150}
+              height={60}
+              className="rounded-full"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 font-bold">
@@ -245,6 +254,72 @@ const Navbar = () => {
               )}
             </div>
 
+            {/* Master Products Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsMasterProductsOpen(true)}
+              onMouseLeave={() => setIsMasterProductsOpen(false)}
+            >
+              <button
+                className={`px-3 py-2 text-sm font-bold flex items-center ${
+                  pathname.startsWith("/master")
+                    ? "text-blue-900 border-b-2 border-blue-900"
+                    : "text-gray-700 hover:text-blue-900"
+                }`}
+              >
+                Master
+                <svg
+                  className={`w-4 h-4 ml-1 ${isMasterProductsOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isMasterProductsOpen && (
+                <div className="fixed inset-x-0 mt-0 bg-white shadow-xl py-4 border-t">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-6 gap-4">
+                      {masterCategories.map((category) => (
+                        <div key={category.name} className="flex flex-col items-center">
+                          <Link
+                            href={`/master/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
+                            className={`group block w-full ${
+                              isMasterCategoryActive(category.name) ? "ring-2 ring-blue-900 rounded-lg" : ""
+                            }`}
+                            prefetch={false}
+                          >
+                            <div className="relative aspect-square w-full overflow-hidden rounded-lg">
+                              <Image
+                                src={category.image}
+                                alt={category.name}
+                                fill
+                                className={`object-cover ${
+                                  isMasterCategoryActive(category.name) ? "opacity-90" : "group-hover:opacity-75"
+                                }`}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              />
+                            </div>
+                            <p
+                              className={`mt-2 text-sm font-bold text-center ${
+                                isMasterCategoryActive(category.name)
+                                  ? "text-blue-900"
+                                  : "text-gray-900 group-hover:text-blue-900"
+                              }`}
+                            >
+                              {category.name}
+                            </p>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/contact-us"
               className={`px-3 py-2 text-sm font-bold ${
@@ -263,7 +338,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-blue-50"
             >
-              <svg className="h-6 w-6" FILL="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -275,6 +350,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {/* Mobile Navigation */}
       <div className={`md:hidden bg-white shadow-lg overflow-hidden ${isMobileMenuOpen ? "max-h-screen" : "max-h-0"}`}>
         <div className="px-2 pt-2 pb-4 space-y-1">
@@ -404,6 +480,66 @@ const Navbar = () => {
                         <p
                           className={`mt-2 text-xs font-medium text-center ${
                             isDuluxCategoryActive(category.name)
+                              ? "text-blue-900 font-bold"
+                              : "text-gray-900 group-hover:text-blue-600"
+                          }`}
+                        >
+                          {category.name}
+                        </p>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Master Products Mobile Dropdown */}
+          <div>
+            <button
+              onClick={() => setIsMasterProductsOpen(!isMasterProductsOpen)}
+              className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
+                pathname.startsWith("/master") ? "text-blue-900 bg-blue-50" : "text-gray-700 hover:bg-blue-50"
+              }`}
+            >
+              Master
+              <svg
+                className={`w-5 h-5 ${isMasterProductsOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div className={`overflow-hidden ${isMasterProductsOpen ? "max-h-screen" : "max-h-0"}`}>
+              <div className="px-4 py-2 bg-gray-50 rounded-md mt-1">
+                <div className="grid grid-cols-2 gap-4">
+                  {masterCategories.map((category) => (
+                    <div key={category.name} className="flex flex-col items-center">
+                      <Link
+                        href={`/master/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
+                        className={`group block w-full ${
+                          isMasterCategoryActive(category.name) ? "ring-2 ring-blue-900 rounded-lg" : ""
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        prefetch={false}
+                      >
+                        <div className="relative aspect-square w-full overflow-hidden rounded-lg">
+                          <Image
+                            src={category.image}
+                            alt={category.name}
+                            fill
+                            className={`object-cover ${
+                              isMasterCategoryActive(category.name) ? "opacity-90" : "group-hover:opacity-75"
+                            }`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                        </div>
+                        <p
+                          className={`mt-2 text-xs font-medium text-center ${
+                            isMasterCategoryActive(category.name)
                               ? "text-blue-900 font-bold"
                               : "text-gray-900 group-hover:text-blue-600"
                           }`}
