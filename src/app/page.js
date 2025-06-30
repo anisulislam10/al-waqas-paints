@@ -247,6 +247,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
+{/* Contact Section */}
 <section className="py-12 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Branches Section */}
@@ -265,9 +266,19 @@ export default function Home() {
             <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
-            <p className="text-gray-700">
-              Shop 1 & 2, Raja Plaza, Duhma Patak Ternol Islamabad
-            </p>
+            <div>
+              <p className="text-gray-700">
+                Shop 1 & 2, Raja Plaza, Duhma Patak Ternol Islamabad
+              </p>
+              <a 
+                href="https://maps.app.goo.gl/6cTvyJ6G22eJr3kNA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline text-sm"
+              >
+                View on Google Maps
+              </a>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
@@ -295,7 +306,8 @@ export default function Home() {
           </div>
         </div>
       </div>
- {/* Branch 2 */}
+
+      {/* Branch 2 */}
       <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
         <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 2</h3>
         <div className="space-y-3">
@@ -303,9 +315,19 @@ export default function Home() {
             <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
-            <p className="text-gray-700">
-              Nadir Plaza, Opposite Lignum Tower, DHA 2,Near Al Janat Mall, GT Road, Islamabad
-            </p>
+            <div>
+              <p className="text-gray-700">
+                Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad
+              </p>
+              <a 
+                href="https://www.google.com/maps/place/33%C2%B031%2721.1%22N+73%C2%B008%2750.1%22E/@33.5225214,73.1423731,713m/data=!3m2!1e3!4b1!4m12!1m7!3m6!1s0x38df99955970a55b:0xe3f90d4e3efe16c8!2zQWwtIFdhcWFzIFBhaW50ICYgSGFyZHdhcmUg2KfZhNmI2YLYp9i1INm-24zZhtm5INin24zZhtqIINq-2KfYsdqI2YjbjNim2LE!8m2!3d33.6040812!4d72.8511801!16s%2Fg%2F11rcx2lvf9!3m3!8m2!3d33.522517!4d73.147244!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline text-sm"
+              >
+                View on Google Maps
+              </a>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
@@ -333,6 +355,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* Branch 3 */}
       <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex-1">
         <h3 className="text-xl font-semibold text-blue-900 mb-3">Branch 3</h3>
@@ -341,9 +364,19 @@ export default function Home() {
             <svg className="w-5 h-5 text-blue-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
-            <p className="text-gray-700">
-              Dhoke Major Stop Kallar Road, Rawat
-            </p>
+            <div>
+              <p className="text-gray-700">
+                Dhoke Major Stop Kallar Road, Rawat
+              </p>
+              <a 
+                href="https://maps.app.goo.gl/uE3cKxExHSLuyNoa6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline text-sm"
+              >
+                View on Google Maps
+              </a>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
@@ -363,8 +396,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-     
     </div>
   </div>
 </section>
