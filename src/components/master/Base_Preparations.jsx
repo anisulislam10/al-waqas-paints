@@ -34,8 +34,8 @@ const MbasePreperation = () => {
         "Easy to apply",
         "Impressive coverage",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
+      detailsLink: "/master/base/sheesha-wall-putty",
+      titleLink: "/master/base/sheesha-wall-putty",
     },
     {
       id: 2,
@@ -47,8 +47,8 @@ const MbasePreperation = () => {
         "Smooths flaws",
         "Works on wood, metal, cement",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
+      detailsLink: "/master/base/under-coat",
+      titleLink: "/master/base/under-coat",
     },
     {
       id: 3,
@@ -60,8 +60,8 @@ const MbasePreperation = () => {
         "Protects from moisture",
         "Easy and fast-drying",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
-      titleLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
+      detailsLink: "/master/base/wall-putty",
+      titleLink: "/master/base/wall-putty",
     },
     {
       id: 4,
@@ -73,8 +73,8 @@ const MbasePreperation = () => {
         "Effective on new and rusty metal",
         "Strong adhesion",
       ],
-      detailsLink: "/master/dulux-easycare",
-      titleLink: "/master/dulux-easycare",
+      detailsLink: "/master/base/primer-red-oxide",
+      titleLink: "/master/base/primer-red-oxide",
     },
     {
       id: 5,
@@ -86,8 +86,8 @@ const MbasePreperation = () => {
         "Protects against moisture",
         "Prevents fungus and algae",
       ],
-      detailsLink: "/master/dulux-pentalite-classic",
-      titleLink: "/master/dulux-pentalite-classic",
+      detailsLink: "/master/base/exterior-primer",
+      titleLink: "/master/base/exterior-primer",
     },
     {
       id: 6,
@@ -99,8 +99,8 @@ const MbasePreperation = () => {
         "Best prep for paint application ",
         "For indoor and outdoor use",
       ],
-      detailsLink: "/master/dulux-pentalite-emulsion",
-      titleLink: "/master/dulux-pentalite-emulsion",
+      detailsLink: "/master/base/exterior-wall-putty",
+      titleLink: "/master/base/exterior-wall-putty",
     },
     {
       id: 7,
@@ -112,8 +112,8 @@ const MbasePreperation = () => {
         "Works on various surfaces",
         "Dries quickly (in 2-3 hours)",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink: "/master/base/super-primer",
+      titleLink: "/master/base/super-primer",
     },
      {
       id: 8,
@@ -125,8 +125,8 @@ const MbasePreperation = () => {
         "Lowers indoor heat",
         "Multi-surface use",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink: "/master/base/roof-master",
+      titleLink: "/master/base/roof-master",
     },
     
   ];
