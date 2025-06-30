@@ -33,6 +33,7 @@ export default function Home() {
     name="description"
     content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
   />
+  <meta name="google-site-verification" content="OKgEj979FUP2uM4YpOCngAKYTlaFD-uTz7TiZOTD9Fg" />
 </Head>
 
 <Script
