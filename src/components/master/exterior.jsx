@@ -34,8 +34,8 @@ const Mexterior = () => {
         "Full Coverage",
         "Glossy Look",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
+      detailsLink: "/master/ext/royal-exterior-silk-emulsion",
+      titleLink: "/master/ext/royal-exterior-silk-emulsion",
     },
     {
       id: 2,
@@ -47,8 +47,8 @@ const Mexterior = () => {
         "Weather Resistance",
         "Temperature Control",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
+      detailsLink: "/master/ext/weather-resistant",
+      titleLink: "/master/ext/weather-resistant",
     },
     {
       id: 3,
@@ -60,8 +60,8 @@ const Mexterior = () => {
         "Weather Resistant",
         "Energy Saving",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
-      titleLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
+      detailsLink: "/master/ext/roof-master",
+      titleLink: "/master/ext/roof-master",
     },
     {
       id: 4,
@@ -73,8 +73,8 @@ const Mexterior = () => {
         "Helps levelling up the masonry surfaces",
         "Crack resistant",
       ],
-      detailsLink: "/master/dulux-easycare",
-      titleLink: "/master/dulux-easycare",
+      detailsLink: "/master/ext/exterior-primer",
+      titleLink: "/master/ext/exterior-primer",
     },
     {
       id: 5,
@@ -86,8 +86,8 @@ const Mexterior = () => {
         "Waterproof Protection",
         "Highest Durability",
       ],
-      detailsLink: "/master/dulux-pentalite-classic",
-      titleLink: "/master/dulux-pentalite-classic",
+      detailsLink: "/master/ext/exterior-wall-putty",
+      titleLink: "/master/ext/exterior-wall-putty",
     },
     {
       id: 6,
@@ -99,8 +99,8 @@ const Mexterior = () => {
         "Easy to clean ",
         "Elegant Aesthetics",
       ],
-      detailsLink: "/master/dulux-pentalite-emulsion",
-      titleLink: "/master/dulux-pentalite-emulsion",
+      detailsLink: "/master/ext/matt-enamel-finish",
+      titleLink: "/master/ext/matt-enamel-finish"
     },
     {
       id: 7,
@@ -112,8 +112,8 @@ const Mexterior = () => {
         "Durable ",
         "Easy to Apply",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink: "/master/ext/synthetic-enamel",
+      titleLink: "/master/ext/synthetic-enamel",
     },
      {
       id: 8,
@@ -125,8 +125,8 @@ const Mexterior = () => {
         "Metallic Finish",
         "Glossy Texture",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink: "/master/ext/synthetic-metallic",
+      titleLink: "/master/ext/synthetic-metallic",
     },
      {
       id: 9,
@@ -138,8 +138,8 @@ const Mexterior = () => {
         "Protection",
         "Durability",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink: "/master/ext/synthetic-metallic",
+      titleLink: "/master/ext/synthetic-metallic",
     },
     
   ];
