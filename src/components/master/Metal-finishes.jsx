@@ -34,8 +34,8 @@ const MMetalFinishes = () => {
         "Lead-free formulation",
         "High Gloss Finish",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-diamon-glo",
+      detailsLink: "/master/metal/synthetic-metallic",
+      titleLink:  "/master/metal/synthetic-metallic",
     },
     {
       id: 2,
@@ -47,8 +47,8 @@ const MMetalFinishes = () => {
         "Excellent color retention over time",
         "High gloss finish",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
-      titleLink: "/master/dulux-ambiance-velvet-touch-pearl-glo",
+      detailsLink:  "/master/metal/synthetic-enamel",
+      titleLink:  "/master/metal/synthetic-enamel",
     },
     {
       id: 3,
@@ -60,8 +60,8 @@ const MMetalFinishes = () => {
         "Water-resistant",
         "Multi-surface use",
       ],
-      detailsLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
-      titleLink: "/master/dulux-ambiance-velvet-touch-rich-matt",
+      detailsLink:  "/master/metal/nc-duco-master",
+      titleLink:  "/master/metal/nc-duco-master",
     },
     {
       id: 4,
@@ -73,8 +73,8 @@ const MMetalFinishes = () => {
         "Wood and metal surface application",
         "High gloss and matte finishes",
       ],
-      detailsLink: "/master/dulux-easycare",
-      titleLink: "/master/dulux-easycare",
+      detailsLink:  "/master/metal/nc-duco-metallic",
+      titleLink:  "/master/metal/nc-duco-metallic",
     },
     {
       id: 5,
@@ -86,8 +86,8 @@ const MMetalFinishes = () => {
         "Weather resistant",
         "Long-lasting",
       ],
-      detailsLink: "/master/dulux-pentalite-classic",
-      titleLink: "/master/dulux-pentalite-classic",
+      detailsLink:  "/master/metal/primer-red-oxide",
+      titleLink:  "/master/metal/primer-red-oxide",
     },
     {
       id: 6,
@@ -99,8 +99,8 @@ const MMetalFinishes = () => {
         "Strong Adhesion",
         "Smooth Finish",
       ],
-      detailsLink: "/master/dulux-pentalite-emulsion",
-      titleLink: "/master/dulux-pentalite-emulsion",
+      detailsLink:  "/master/metal/knifing-filler",
+      titleLink:  "/master/metal/knifing-filler",
     },
     {
       id: 7,
@@ -112,8 +112,8 @@ const MMetalFinishes = () => {
         "UV protection",
         "Fast drying",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink:  "/master/metal/synthetic-varnish",
+      titleLink:  "/master/metal/synthetic-varnish",
     },
      {
       id: 8,
@@ -125,8 +125,8 @@ const MMetalFinishes = () => {
         "Full coverage",
         "Easy to apply",
       ],
-      detailsLink: "/master/dulux-matt-enamel",
-      titleLink: "/master/dulux-matt-enamel",
+      detailsLink:  "/master/metal/aluminium-silver",
+      titleLink:  "/master/metal/aluminium-silver",
     },
         
   ];
