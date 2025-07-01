@@ -69,8 +69,18 @@ const tools = [
     description: "High-strength adhesive for permanent, waterproof bonding of tails, wigs, and hair extensions. Safe for skin and flexible when dry.",
     image: "/tools/XTREMEBOND-W.webp",
   },
-];
+ {
+  name: "Texture Roller",
+  description: "Specialty roller for creating decorative wall textures like orange peel, knockdown, or stipple effects. Works with all texture compounds.",
+  image: "/tools/Textured-rollers.webp"
+},
+{
+  name: "Korenesh Sandpaper",
+  description: "Coarse-grit sandpaper for heavy material removal and surface preparation. Ideal for smoothing rough wood, metal, or drywall compounds.",
+  image: "/tools/kornish-sand-paper.jfif"
+}
 
+];
 export default function ToolsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
