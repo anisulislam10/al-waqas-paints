@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
 import MetaPixel from '@/components/MetaPixel';
-import WhatsAppButton from '@/components/WhatsAppButton';
 
 
 
@@ -164,64 +163,111 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-   {/* Hero Section */}
+{/* Hero Section */}
 <section
-  className=" text-white min-h-screen flex items-center justify-center bg-[url('/alwaqas-paint-banner.webp')] bg-cover bg-center relative"
+  className="text-white min-h-screen flex items-center justify-center bg-[url('/alwaqas-paint-banner.webp')] bg-cover bg-center relative"
 >
   <div className="absolute inset-0 bg-black/50 z-0"></div>
+
+  {/* Brand Logos Container */}
+  <div className="hidden md:block fixed top-1/2 right-0 transform -translate-y-1/2 z-20 flex flex-col items-center justify-center bg-gray-700/80 p-2 rounded-l-lg">
+    <p className="text-white mb-3 text-xs font-semibold text-center">Our Brands</p>
+    <div className="flex flex-col gap-3 items-center">
+      <Image 
+        src="/nippon.png" 
+        alt="Nippon Paint" 
+        width={80} 
+        height={40}
+        className="h-8 w-16 object-contain opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/Dulux_logo.webp" 
+        alt="Dulux Paint" 
+        width={80} 
+        height={40}
+        className="h-8 w-16 object-cover opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/master-logo-removebg-preview.png" 
+        alt="Master Paints" 
+        width={80} 
+        height={40}
+        className="h-8 w-16 object-contain opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/berger-logo-removebg-preview.png" 
+        alt="Berger Paints" 
+        width={80} 
+        height={40}
+        className="h-8 w-16 object-cover opacity-90 hover:opacity-100 transition-opacity"
+      />
+    </div>
+  </div>
+
+  {/* Mobile Brand Logos (Visible on sm and below) */}
+  <div className="md:hidden absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center justify-center bg-gray-700/80 p-3 rounded-t-lg">
+    <p className="text-white mb-2 text-xs font-semibold text-center">Our Brands</p>
+    <div className="flex flex-row gap-3 items-center justify-center">
+      <Image 
+        src="/nippon.png" 
+        alt="Nippon Paint" 
+        width={60} 
+        height={30}
+        className="h-6 w-12 object-contain opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/Dulux_logo.webp" 
+        alt="Dulux Paint" 
+        width={60} 
+        height={30}
+        className="h-6 w-12 object-cover opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/master-logo-removebg-preview.png" 
+        alt="Master Paints" 
+        width={60} 
+        height={30}
+        className="h-6 w-12 object-contain opacity-90 hover:opacity-100 transition-opacity"
+      />
+      <Image 
+        src="/berger-logo-removebg-preview.png" 
+        alt="Berger Paints" 
+        width={60} 
+        height={30}
+        className="h-6 w-12 object-cover opacity-90 hover:opacity-100 transition-opacity"
+      />
+    </div>
+  </div>
+
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
       Transform Your World with Al-Waqas Paint
     </h1>
-    <p className="text-lg text-gray-100 mb-6 max-w-2xl mx-auto md:mx-0">
+    <p className="text-base sm:text-lg text-gray-100 mb-5 sm:mb-6 max-w-xl mx-auto md:mx-0">
       Experience Nippon, Dulux, and Master coatings eco-smart, long-lasting, beautifully crafted for every surface.
     </p>
-    
-    {/* Brand Logos - Added above the CTA button */}
-    <div className="mb-8">
-      <p className="text-white mb-4 font-bold text-md">Our Top Brands</p>
-      <div className="flex flex-wrap justify-center md:justify-start gap-6 items-center">
-        <Image 
-          src="/nippon.png" 
-          alt="Nippon Paint" 
-          width={120} 
-          height={60}
-          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-        />
-        <Image 
-          src="/Dulux_logo.webp" 
-          alt="Dulux Paint" 
-          width={120} 
-          height={60}
-          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-        />
-        <Image 
-          src="/master-logo-removebg-preview.png" 
-          alt="Master Paints" 
-          width={120} 
-          height={60}
-          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-        />
-        <Image 
-          src="/berger-logo-removebg-preview.png" 
-          alt="Berger Paints" 
-          width={120} 
-          height={60}
-          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-        />
-      </div>
-    </div>
 
-    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
       <a
         href="#product-categories"
-        className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-bold hover:bg-red-900 transition-colors duration-200"
+        className="inline-block bg-[#E50019] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#FF0A23] transition-colors duration-200 text-sm sm:text-base"
       >
         Explore Our Categories
       </a>
+      <a
+        href="#quote"
+        className="inline-block bg-[#1C097A] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#2410A0] transition-colors duration-200 text-sm sm:text-base"
+      >
+        Get a Quote
+      </a>
+      <a
+        href="https://wa.me/+923335093223"
+        className="inline-block bg-green-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-green-500 transition-colors duration-200 text-sm sm:text-base"
+      >
+        WhatsApp
+      </a>
     </div>
   </div>
-  <WhatsAppButton />
 </section>
         {/* Product Categories Section */}
         <section id="product-categories" className="py-12 bg-white">

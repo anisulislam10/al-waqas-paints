@@ -69,23 +69,22 @@ const Navbar = () => {
 
   return (
     <header className={`sticky top-0 z-50 bg-white ${scrolled ? "shadow-md" : ""}`}>
-      {/* Top Contact Info Bar */}
-      <div className="bg-gradient-to-r from-blue-900 to-red-900 px-4 py-2 text-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto flex justify-between">
-          <span className="text-white hidden sm:block sm:text-sm">Transform with Confidence Nippon, ICI Dulux, and Master Coatings.</span>
-          <div className="flex space-x-4">
-            {/* <a href="tel:+923335093223" className="text-white hover:text-blue-100">
-              +92 333 5093223
-            </a> */}
-            <a 
-    href="tel:+923335093223" 
-  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all duration-300"
-  >
-    Call Now
-  </a>
-          </div>
-        </div>
-      </div>
+     {/* Top Contact Info Bar */}
+<div className="bg-gradient-to-r from-blue-900 to-red-900 px-4 py-2 text-sm border-b border-gray-200">
+  <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-2">
+    <span className="text-white text-sm text-center sm:text-left hidden sm:inline">
+      Transform with Confidence Nippon, ICI Dulux, and Master Coatings.
+    </span>
+    <div className="w-full sm:w-auto flex justify-center sm:block">
+      <a 
+        href="tel:+923335093223" 
+        className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all duration-300 inline-block"
+      >
+        Call Now
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,8 +133,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith("/products")
-                    ? "text-blue-900 border-b-2 border-blue-900"
-                    : "text-gray-700 hover:text-blue-900"
+                    ? "text-red-600 border-b-2 border-blue-900"
+                    : "text-red-700 hover:text-red-800"
                 }`}
               >
                 Nippon
@@ -200,8 +199,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith("/dulux")
-                    ? "text-blue-900 border-b-2 border-blue-900"
-                    : "text-gray-700 hover:text-blue-900"
+                    ? "text-blue-800 border-b-2 border-blue-900"
+                    : "text-blue-800 hover:text-blue-700"
                 }`}
               >
                 Dulux
@@ -267,7 +266,7 @@ const Navbar = () => {
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith("/master")
                     ? "text-blue-900 border-b-2 border-blue-900"
-                    : "text-gray-700 hover:text-blue-900"
+                    : "text-blue-700 hover:text-blue-800"
                 }`}
               >
                 Master
