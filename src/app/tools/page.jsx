@@ -40,7 +40,7 @@ const tools = [
   {
     name: "Scraper",
     description: "Heavy-duty scraper for removing old paint and preparing surfaces for a smooth finish.",
-    image: "/tools/Ultrimax_products_8_819fd48b-1866-49e4-828d-76f0d2fcda49.webp",
+    image: "/tools/scrapper.png",
   },
 //   {
 //     name: "Deco Set",
@@ -52,6 +52,32 @@ const tools = [
     description: "Portable paint sprayer for quick, even coverage on large or textured surfaces.",
     image: "/tools/Paint-Spray-Bottles.png",
   },
+   {
+    name: "Kerosene oil",
+  description: "High-purity kerosene for thinning oil-based paints, cleaning tools, and fuel applications. Ensures smooth paint consistency and easy equipment maintenance.",
+    image: "/tools/keroscene.jpg",
+  },
+  {
+  name: "Deerfos Sandpaper",
+  description: "Premium abrasive sandpaper for smooth surface preparation. Ideal for sanding wood, metal, or paint between coats. Durable backing with consistent grit for even finishes.",
+  image: "/tools/sandPaper.webp",
+},
+{
+  name: "Plaster of Paris",
+  description: "Fast-setting gypsum plaster for smooth casts, molds, and wall repairs. Dries quickly to a hard finish.",
+  image: "/tools/Prep-PlasterOfParis_2.png",
+},
+{
+  name: "Wallcoat",
+  description: "Premium wall finishing coat for smooth, durable surfaces. Ideal for final touch-ups and seamless repairs.",
+  image: "/tools/wallcoat-removebg-preview.png",
+},
+{
+  name: "Artist Brushes",
+  description: "Professional-grade paintbrushes for fine art and detailing. Precision tips with durable bristles for smooth acrylic, oil, or watercolor application.",
+  image: "/tools/artistBrushes.webp"
+}
+
 ];
 
 export default function ToolsPage() {
@@ -93,7 +119,7 @@ export default function ToolsPage() {
                   href="tel:+923335093223"
                   className="inline-block bg-green-700 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-md font-bold hover:bg-green-800 transition-colors duration-200 text-center text-sm sm:text-base"
                 >
-                  Call Now
+                  Call
                 </a>
               </div>
             </div>
