@@ -324,7 +324,7 @@ const Navbar = () => {
             </div>
 
 
-<Link
+{/* <Link
               href="/tools"
               className={`px-3 py-2 text-sm font-bold ${
                 pathname === "/contact-us"
@@ -333,7 +333,7 @@ const Navbar = () => {
               }`}
             >
               Tools
-            </Link>
+            </Link> */}
             <Link
               href="/contact-us"
               className={`px-3 py-2 text-sm font-bold ${
