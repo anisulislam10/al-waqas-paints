@@ -178,7 +178,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="#product-categories"
-                className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-medium hover:bg-red-900 transition-colors duration-200"
+                className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-bold hover:bg-red-900 transition-colors duration-200"
               >
                 Explore Our Categories
               </a>
