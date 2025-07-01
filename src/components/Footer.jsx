@@ -49,9 +49,9 @@ const Footer = () => {
           {/* Intro Section */}
 <div>
   <img
-    src="https://alwaqaspaint.com/logoal-.png"
+    src="/AlWaqas Paint & Hardware.svg"
     alt="Al-Waqas Paint Logo"
-    className="mb-4 bg-white"
+    className="mb-4 bg-white h-16 w-38"
   />
   <p className="text-sm text-gray-300">
     Al-Waqas Paint proudly offers premium Nippon and Dulux coatings for interior, exterior, and specialty surfaces. With an unwavering commitment to excellence, innovation, and environmental sustainability, we deliver vibrant, long-lasting, and eco-conscious solutions that transform spaces with enduring beauty and superior quality.
