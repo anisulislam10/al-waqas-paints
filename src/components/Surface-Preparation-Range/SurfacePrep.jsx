@@ -10,18 +10,19 @@ const SurfacePrep = () => {
     waterBased: false,
     interiorEmulsion: false,
     mattEnamel: false,
-    texturedSeries: false
+    texturedSeries: false,
+    putty: false, // Added state for Putty category
   });
 
   // Toggle menu expansion
   const toggleMenu = (menu) => {
-    setExpandedMenus(prev => ({
+    setExpandedMenus((prev) => ({
       ...prev,
-      [menu]: !prev[menu]
+      [menu]: !prev[menu],
     }));
   };
 
-  // Interior products data
+  // Interior products data (unchanged, as Putty products are only added to sidebar)
   const interiorProducts = [
     {
       id: 1,
@@ -29,7 +30,7 @@ const SurfacePrep = () => {
       category: "Surface Preparation Range",
       image: "/express-stroke-sealer.png",
       detailsLink: "/products/nippon-expresskote-sealer",
-      titleLink: "/products/interior/premium-wall-paint-details"
+      titleLink: "/products/interior/premium-wall-paint-details",
     },
     {
       id: 2,
@@ -37,7 +38,7 @@ const SurfacePrep = () => {
       category: "Surface Preparation Range",
       image: "/Vnilex-5100.png",
       detailsLink: "/products/nippon-vinilex-5100-wall-sealer",
-      titleLink: "/products/interior/silk-finish-paint-details"
+      titleLink: "/products/interior/silk-finish-paint-details",
     },
     {
       id: 3,
@@ -45,7 +46,7 @@ const SurfacePrep = () => {
       category: "Surface Preparation Range",
       image: "/Vinilex-5200-Wall-Sealer.png",
       detailsLink: "/products/nippon-vinilex-5200-wall-sealer",
-      titleLink: "/products/interior/matte-finish-paint-details"
+      titleLink: "/products/interior/matte-finish-paint-details",
     },
     {
       id: 4,
@@ -53,35 +54,35 @@ const SurfacePrep = () => {
       category: "Surface Preparation Range",
       image: "/Hi-bond.png",
       detailsLink: "/products/nippon-hi-bond-wall-primer",
-      titleLink: "/products/interior/washable-paint-details"
+      titleLink: "/products/interior/washable-paint-details",
     },
-     {
+    {
       id: 5,
       title: "Nippon Red Oxide Primer",
       category: "Surface Preparation Range",
       image: "/Red-oxide-1.png",
       detailsLink: "/products/nippon-red-oxide-primer",
-      titleLink: "/products/interior/washable-paint-details"
+      titleLink: "/products/interior/washable-paint-details",
     },
-     {
+    {
       id: 6,
       title: "Nippon Quality Primer",
       category: "Surface Preparation Range",
       image: "/Q-Primer-Edited.png",
       detailsLink: "/products/nippon-quality-primer",
-      titleLink: "/products/interior/washable-paint-details"
+      titleLink: "/products/interior/washable-paint-details",
     },
-     {
+    {
       id: 7,
       title: "Nippon Q Seal Primer",
       category: "Surface Preparation Range",
       image: "/Q-Seal-Solvent-Based-Primer-min.png",
       detailsLink: "/products/nippon-q-seal-primer",
-      titleLink: "/products/interior/washable-paint-details"
+      titleLink: "/products/interior/washable-paint-details",
     },
   ];
 
-  // Sidebar menu structure
+  // Sidebar menu structure with Putty category added
   const sidebarMenus = [
     {
       title: "Surface Preparation Range",
@@ -94,7 +95,19 @@ const SurfacePrep = () => {
         "Nippon Vinilex 5100 Wall Sealer",
         "Nippon Expresskote Sealer",
       ],
-      key: "waterBased"
+      key: "waterBased",
+    },
+    {
+      title: "Putty",
+      items: [
+        "Nippon ACS Putty",
+        "Nippon Hi-Bond Acrylic Putty",
+        "Nippon Wall Putty",
+        "Nippon Extreme Wall Putty",
+        "Nippon Wall Putty A-100",
+        "Nippon Wall Putty Project",
+      ],
+      key: "putty",
     },
   ];
 
@@ -137,7 +150,7 @@ const SurfacePrep = () => {
                   >
                     {menu.title}
                     <svg
-                      className={`w-4 h-4 transition-transform ${expandedMenus[menu.key] ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 transition-transform ${expandedMenus[menu.key] ? "rotate-180" : ""}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -150,7 +163,7 @@ const SurfacePrep = () => {
                       {menu.items.map((item, index) => (
                         <Link
                           key={index}
-                          href={`/products/${item.toLowerCase().replace(/[~ ]/g, '-')}`}
+                          href={`/products/${item.toLowerCase().replace(/[~ ]/g, "-")}`}
                           className="block px-3 py-1.5 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors text-sm"
                         >
                           {item}
@@ -167,10 +180,13 @@ const SurfacePrep = () => {
         {/* Main Content */}
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Primers/Sealers</h2>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {interiorProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={product.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
                 {/* Product Image - Links to details page */}
                 <Link href={product.detailsLink} className="block">
                   <div className="relative h-48 w-full">
@@ -183,7 +199,7 @@ const SurfacePrep = () => {
                     />
                   </div>
                 </Link>
-                
+
                 <div className="p-2">
                   {/* Product Title - Links to separate page */}
                   <Link href={product.detailsLink}>
@@ -191,10 +207,10 @@ const SurfacePrep = () => {
                       {product.title}
                     </h3>
                   </Link>
-                  
+
                   {/* Product Category */}
                   <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
-                  
+
                   {/* Buy Now Button */}
                   <a href="tel:+923335093223">
                     <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
