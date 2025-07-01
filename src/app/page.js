@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
 import MetaPixel from '@/components/MetaPixel';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 
 
@@ -163,29 +164,65 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-      {/* Hero Section */}
-   <section
-          className="bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('/alwaqas-paint-banner.webp')] bg-cover bg-center relative"
-        >
-          <div className="absolute inset-0 bg-black/50 z-0"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Elevate Your Spaces with Al-Waqas Paint
-            </h1>
-            <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto md:mx-0">
-              Discover premium, eco-friendly Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces, crafted for durability, style, and sustainability.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
-                href="#product-categories"
-                className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-bold hover:bg-red-900 transition-colors duration-200"
-              >
-                Explore Our Categories
-              </a>
-            </div>
-          </div>
-        </section>
+   {/* Hero Section */}
+<section
+  className=" text-white min-h-screen flex items-center justify-center bg-[url('/alwaqas-paint-banner.webp')] bg-cover bg-center relative"
+>
+  <div className="absolute inset-0 bg-black/50 z-0"></div>
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      Transform Your World with Al-Waqas Paint
+    </h1>
+    <p className="text-lg text-gray-100 mb-6 max-w-2xl mx-auto md:mx-0">
+      Experience Nippon, Dulux, and Master coatings eco-smart, long-lasting, beautifully crafted for every surface.
+    </p>
+    
+    {/* Brand Logos - Added above the CTA button */}
+    <div className="mb-8">
+      <p className="text-white mb-4 font-bold text-md">Our Top Brands</p>
+      <div className="flex flex-wrap justify-center md:justify-start gap-6 items-center">
+        <Image 
+          src="/nippon.png" 
+          alt="Nippon Paint" 
+          width={120} 
+          height={60}
+          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+        <Image 
+          src="/Dulux_logo.webp" 
+          alt="Dulux Paint" 
+          width={120} 
+          height={60}
+          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+        <Image 
+          src="/master-logo-removebg-preview.png" 
+          alt="Master Paints" 
+          width={120} 
+          height={60}
+          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+        <Image 
+          src="/berger-logo-removebg-preview.png" 
+          alt="Berger Paints" 
+          width={120} 
+          height={60}
+          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+      </div>
+    </div>
 
+    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <a
+        href="#product-categories"
+        className="inline-block bg-red-800 text-white px-6 py-3 rounded-md font-bold hover:bg-red-900 transition-colors duration-200"
+      >
+        Explore Our Categories
+      </a>
+    </div>
+  </div>
+  <WhatsAppButton />
+</section>
         {/* Product Categories Section */}
         <section id="product-categories" className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

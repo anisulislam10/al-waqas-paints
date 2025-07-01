@@ -72,14 +72,17 @@ const Navbar = () => {
       {/* Top Contact Info Bar */}
       <div className="bg-gradient-to-r from-blue-900 to-red-900 px-4 py-2 text-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex justify-between">
-          <span className="text-white hidden sm:block sm:text-sm">Premium Coatings Solution</span>
+          <span className="text-white hidden sm:block sm:text-sm">Transform with Confidence Nippon, ICI Dulux, and Master Coatings.</span>
           <div className="flex space-x-4">
-            <a href="tel:+923335093223" className="text-white hover:text-blue-100">
+            {/* <a href="tel:+923335093223" className="text-white hover:text-blue-100">
               +92 333 5093223
-            </a>
-            <a href="mailto:info@alwaqaspaint.com" className="text-white hover:text-blue-100">
-              info@alwaqaspaint.com
-            </a>
+            </a> */}
+            <a 
+    href="tel:+923335093223" 
+  className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all duration-300"
+  >
+    Call Now
+  </a>
           </div>
         </div>
       </div>
@@ -90,10 +93,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image 
-              src="/logoal-.png" 
+              src="/AlWaqas Paint & Hardware.svg" 
               alt="Al-Waqas Paint Logo"
-              width={150}
-              height={60}
+              width={101}
+              height={20}
               className="rounded-full"
             />
           </Link>
@@ -320,6 +323,17 @@ const Navbar = () => {
               )}
             </div>
 
+
+<Link
+              href="/tools"
+              className={`px-3 py-2 text-sm font-bold ${
+                pathname === "/contact-us"
+                  ? "text-blue-900 border-b-2 border-blue-900"
+                  : "text-gray-700 hover:text-blue-900"
+              }`}
+            >
+              Tools
+            </Link>
             <Link
               href="/contact-us"
               className={`px-3 py-2 text-sm font-bold ${
