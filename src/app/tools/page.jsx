@@ -77,7 +77,7 @@ const tools = [
 {
   name: "Korenesh Sandpaper",
   description: "Coarse-grit sandpaper for heavy material removal and surface preparation. Ideal for smoothing rough wood, metal, or drywall compounds.",
-  image: "/tools/kornish-sand-paper.jfif"
+  image: "/tools/kornish-sand-paper.png"
 }
 
 ];
