@@ -393,7 +393,7 @@ const Navbar = () => {
             <Link
               href='/tools'
               className={`px-3 py-2 text-sm font-bold ${
-                pathname === '/contact-us'
+                pathname === '/tools'
                   ? 'text-blue-900 border-b-2 border-blue-900'
                   : 'text-gray-700 hover:text-blue-900'
               }`}
@@ -720,6 +720,20 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+
+
+
+<Link
+            href='/tools'
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              pathname === '/contact-us'
+                ? 'text-blue-900 bg-blue-50'
+                : 'text-gray-700 hover:bg-blue-50'
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Tools
+          </Link>
 
           <Link
             href='/contact-us'
