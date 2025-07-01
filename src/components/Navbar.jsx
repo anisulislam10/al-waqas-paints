@@ -726,7 +726,7 @@ const Navbar = () => {
 <Link
             href='/tools'
             className={`block px-3 py-2 rounded-md text-base font-medium ${
-              pathname === '/contact-us'
+              pathname === '/tools'
                 ? 'text-blue-900 bg-blue-50'
                 : 'text-gray-700 hover:bg-blue-50'
             }`}
