@@ -50,7 +50,7 @@ const tools = [
   {
     name: "Spray Mubah",
     description: "Portable paint sprayer for quick, even coverage on large or textured surfaces.",
-    image: "/tools/Paint-DEEP-VIOLET.webp",
+    image: "/tools/Paint-Spray-Bottles.png",
   },
 ];
 
