@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
         </Link>
 
         {children}
-   <iframe
+   {/* <iframe
       src="https://back.techrecto.com/api/chatbot/68658df2c4ca6e6adb909142/686588ceadec9f2263e6f753?domain=https%3A%2F%2Falwaqaspaint.com"
       style={{
         width: "400px",
@@ -100,7 +100,7 @@ export default function RootLayout({ children }) {
         right: "20px",
       }}
       title="Al Waqas Paint Chatbot"
-    />
+    /> */}
  
         <Footer />
       </body>
