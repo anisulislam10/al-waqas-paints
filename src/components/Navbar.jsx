@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isNipponProductsOpen, setIsNipponProductsOpen] = useState(false)
   const [isDuluxProductsOpen, setIsDuluxProductsOpen] = useState(false)
   const [isMasterProductsOpen, setIsMasterProductsOpen] = useState(false)
+  const [isBergerProductsOpen, setIsBergerProductsOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeNav, setActiveNav] = useState('')
   const [scrolled, setScrolled] = useState(false)
@@ -33,6 +34,14 @@ const Navbar = () => {
     { name: 'Primer', image: '/dulux-primer.jpg' },
     { name: 'Special product', image: '/dulux-special.jpg' },
     { name: 'Waterproofing', image: '/dulux-waterproffing.jpg' }
+  ]
+
+  // Berger product categories (same as Dulux)
+  const bergerCategories = [
+    { name: 'Interior', image: '/berger/navbar/Brown-interior-paint.webp' },
+    { name: 'Exterior', image: '/berger/navbar/exterior.webp' },
+    { name: 'Ancillary Products', image: '/berger/navbar/3.webp' },
+    { name: 'Wood Pro Range', image: '/berger/navbar/4.webp' },
   ]
 
   // Master product categories
@@ -61,7 +70,8 @@ const Navbar = () => {
     else if (
       pathname.startsWith('/products') ||
       pathname.startsWith('/dulux') ||
-      pathname.startsWith('/master')
+      pathname.startsWith('/master') ||
+      pathname.startsWith('/berger')
     )
       setActiveNav('products')
   }, [pathname])
@@ -79,6 +89,12 @@ const Navbar = () => {
     )
   }
 
+  const isBergerCategoryActive = categoryName => {
+    return (
+      pathname === `/berger/${categoryName.toLowerCase().replace(/\s+/g, '-')}`
+    )
+  }
+
   const isMasterCategoryActive = categoryName => {
     return (
       pathname === `/master/${categoryName.toLowerCase().replace(/\s+/g, '-')}`
@@ -93,7 +109,7 @@ const Navbar = () => {
       <div className='bg-gradient-to-r from-blue-900 to-red-900 px-4 py-2 text-sm border-b border-gray-200'>
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-2'>
           <span className='text-white text-sm text-center sm:text-left hidden sm:inline'>
-            Transform with Confidence Nippon, ICI Dulux, and Master Coatings.
+            Transform with Confidence Nippon, ICI Dulux, Master, and Berger Coatings.
           </span>
           <div className='w-full sm:w-auto flex justify-center sm:block'>
             <a
@@ -121,7 +137,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className='hidden md:flex items-center space-x-8 font-bold'>
+          <nav className='hidden md:flex items-center space-x-2 font-bold'>
             <Link
               href='/'
               className={`px-3 py-2 text-sm font-bold ${
@@ -308,6 +324,8 @@ const Navbar = () => {
               )}
             </div>
 
+           
+
             {/* Master Products Dropdown */}
             <div
               className='relative'
@@ -389,6 +407,87 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+             {/* Berger Products Dropdown */}
+            <div
+              className='relative'
+              onMouseEnter={() => setIsBergerProductsOpen(true)}
+              onMouseLeave={() => setIsBergerProductsOpen(false)}
+            >
+              <button
+                className={`px-3 py-2 text-sm font-bold flex items-center ${
+                  pathname.startsWith('/berger')
+                    ? 'text-blue-800 border-b-2 border-blue-900'
+                    : 'text-blue-800 hover:text-blue-700'
+                }`}
+              >
+                Berger
+                <svg
+                  className={`w-4 h-4 ml-1 ${
+                    isBergerProductsOpen ? 'rotate-180' : ''
+                  }`}
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </button>
+
+              {isBergerProductsOpen && (
+                <div className='fixed inset-x-0 mt-0 bg-white shadow-xl py-4 border-t'>
+                  <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+                    <div className='grid grid-cols-6 gap-4'>
+                      {bergerCategories.map(category => (
+                        <div
+                          key={category.name}
+                          className='flex flex-col items-center'
+                        >
+                          <Link
+                            href={`/berger/${category.name
+                              .toLowerCase()
+                              .replace(/\s+/g, '-')}`}
+                            className={`group block w-full ${
+                              isBergerCategoryActive(category.name)
+                                ? 'ring-2 ring-blue-900 rounded-lg'
+                                : ''
+                            }`}
+                            prefetch={false}
+                          >
+                            <div className='relative aspect-square w-full overflow-hidden rounded-lg'>
+                              <Image
+                                src={category.image}
+                                alt={category.name}
+                                fill
+                                className={`object-cover ${
+                                  isBergerCategoryActive(category.name)
+                                    ? 'opacity-90'
+                                    : 'group-hover:opacity-75'
+                                }`}
+                                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                              />
+                            </div>
+                            <p
+                              className={`mt-2 text-sm font-bold text-center ${
+                                isBergerCategoryActive(category.name)
+                                  ? 'text-blue-900'
+                                  : 'text-gray-900 group-hover:text-blue-900'
+                              }`}
+                            >
+                              {category.name}
+                            </p>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link
               href='/tools'
@@ -445,7 +544,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {/* Mobile Navigation */}
       <div
         className={`md:hidden bg-white shadow-lg overflow-hidden ${
@@ -639,6 +737,8 @@ const Navbar = () => {
             </div>
           </div>
 
+         
+
           {/* Master Products Mobile Dropdown */}
           <div>
             <button
@@ -720,10 +820,87 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+ {/* Berger Products Mobile Dropdown */}
+          <div>
+            <button
+              onClick={() => setIsBergerProductsOpen(!isBergerProductsOpen)}
+              className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
+                pathname.startsWith('/berger')
+                  ? 'text-blue-900 bg-blue-50'
+                  : 'text-gray-700 hover:bg-blue-50'
+              }`}
+            >
+              Berger
+              <svg
+                className={`w-5 h-5 ${isBergerProductsOpen ? 'rotate-180' : ''}`}
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M19 9l-7 7-7-7'
+                />
+              </svg>
+            </button>
 
+            <div
+              className={`overflow-hidden ${
+                isBergerProductsOpen ? 'max-h-screen' : 'max-h-0'
+              }`}
+            >
+              <div className='px-4 py-2 bg-gray-50 rounded-md mt-1'>
+                <div className='grid grid-cols-2 gap-4'>
+                  {bergerCategories.map(category => (
+                    <div
+                      key={category.name}
+                      className='flex flex-col items-center'
+                    >
+                      <Link
+                        href={`/berger/${category.name
+                          .toLowerCase()
+                          .replace(/\s+/g, '-')}`}
+                        className={`group block w-full ${
+                          isBergerCategoryActive(category.name)
+                            ? 'ring-2 ring-blue-900 rounded-lg'
+                            : ''
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        prefetch={false}
+                      >
+                        <div className='relative aspect-square w-full overflow-hidden rounded-lg'>
+                          <Image
+                            src={category.image}
+                            alt={category.name}
+                            fill
+                            className={`object-cover ${
+                              isBergerCategoryActive(category.name)
+                                ? 'opacity-90'
+                                : 'group-hover:opacity-75'
+                            }`}
+                            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                          />
+                        </div>
+                        <p
+                          className={`mt-2 text-xs font-medium text-center ${
+                            isBergerCategoryActive(category.name)
+                              ? 'text-blue-900 font-bold'
+                              : 'text-gray-900 group-hover:text-blue-600'
+                          }`}
+                        >
+                          {category.name}
+                        </p>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
-
-<Link
+          <Link
             href='/tools'
             className={`block px-3 py-2 rounded-md text-base font-medium ${
               pathname === '/tools'
