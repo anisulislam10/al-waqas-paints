@@ -254,12 +254,11 @@ export default function Home() {
       >
         Explore Our Categories
       </a>
-      <a
-        href="#quote"
+      <Link href="/get-a-quote"
         className="inline-block bg-[#1C097A] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#2410A0] transition-colors duration-200 text-sm sm:text-base"
       >
         Get a Quote
-      </a>
+      </Link>
       <a
         href="https://wa.me/+923335093223"
         className="inline-block bg-green-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-green-500 transition-colors duration-200 text-sm sm:text-base"
