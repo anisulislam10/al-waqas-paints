@@ -89,8 +89,11 @@ export default function RootLayout({ children }) {
         </Link>
 
         {children}
- <iframe src="https://back.techrecto.com/api/chatbot/68658df2c4ca6e6adb909142/686588ceadec9f2263e6f753?domain=https%3A%2F%2Falwaqaspaint.com"style="width: 400px; height: 600px; border: none; position: fixed; bottom: right: 20px;"allowtransparency="true">
- </iframe>
+ {/* <iframe
+        src="https://back.techrecto.com/api/chatbot/68654fe9adec9f2263e6f54a/6839dd2c1930b4d886aad753?domain=https%3A%2F%2Fwww.alwaqaspaint.com"
+        style="width: 400px; height: 600px; border: none; position: fixed; bottom: right: 20px;"
+        allowtransparency="true"
+></iframe> */}
  
         <Footer />
       </body>
