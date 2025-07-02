@@ -20,7 +20,7 @@ export async function POST(request) {
     // Email options
     const mailOptions = {
       from: `"Al Waqas Paint Quote Form" <${'support@sharplogician.com'}>`,
-      to: 'support@sharplogician.com', 
+      to: 'adeel@sharplogician.com', 
       subject: `Al Waqas Paint New Quote Request from ${fullName}`,
       text: `
         Full Name: ${fullName}
