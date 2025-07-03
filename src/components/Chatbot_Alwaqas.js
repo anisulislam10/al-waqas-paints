@@ -1,78 +1,44 @@
 'use client';
+import { useEffect } from 'react';
  
-import Script from 'next/script';
-import { useEffect, useRef } from 'react';
- 
-const Chatbot_Alwaqas = () => {
-  const initAttempts = useRef(0);
-  const maxAttempts = 5;
- 
+export default function ChatbotLoader() {
   useEffect(() => {
-    // Set ChatbotConfig immediately
-    window.ChatbotConfig = {
-      flowId: "68658df2c4ca6e6adb909142",
-      userId: "686588ceadec9f2263e6f753",
-      websiteDomain: "https://www.alwaqaspaint.com",
-      position: "bottom-right",
-      theme: {
-        primary: "#6366f1",
-        secondary: "#f59e0b",
-        background: "#ffffff",
-        text: "#1f2937",
-      },
-    };
-    console.log('[Chatbot] ChatbotConfig set:', window.ChatbotConfig);
+    const script = document.createElement('script');
+    script.src = 'https://back.techrecto.com/api/chatbot/script.js';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
  
-    const handleLoad = () => {
-      console.log('[Chatbot] Script.js loaded');
-      if (window.initChatbot) {
-        console.log('[Chatbot] Calling window.initChatbot');
-        window.initChatbot();
-        // Verify DOM elements after initialization
-        setTimeout(() => {
-          const container = document.getElementById('chatbot-container');
-          const toggle = document.getElementById('chatbot-toggle');
-          const wrapper = document.getElementById('chatbot-wrapper');
-          console.log('[Chatbot] Post-init check:', {
-            containerExists: !!container,
-            toggleExists: !!toggle,
-            wrapperExists: !!wrapper,
-            toggleStyles: toggle ? window.getComputedStyle(toggle) : null,
-            wrapperStyles: wrapper ? window.getComputedStyle(wrapper) : null,
-            bodyChildren: Array.from(document.body.children).map(el => el.id || el.tagName),
-          });
-        }, 1500);
-      } else if (initAttempts.current < maxAttempts) {
-        console.warn('[Chatbot] window.initChatbot not found, retrying... Attempt:', initAttempts.current + 1);
-        initAttempts.current += 1;
-        setTimeout(handleLoad, 1000);
-      } else {
-        console.error('[Chatbot] Failed to load initChatbot after', maxAttempts, 'retries');
-      }
+    script.onload = () => {
+      window.ChatbotConfig = {
+        flowId: '68658df2c4ca6e6adb909142',
+        userId: '686588ceadec9f2263e6f753',
+        websiteDomain: 'https://www.alwaqaspaint.com',
+        position: 'bottom-right',
+        theme: {
+          primary: '#6366f1',
+          secondary: '#f59e0b',
+          background: '#ffffff',
+          text: '#1f2937'
+        }
+      };
+ 
+      // Wait a bit to make sure DOM is ready
+      setTimeout(() => {
+        if (window.initChatbot) {
+          console.log('[ChatbotLoader] Calling initChatbot');
+          window.initChatbot();
+        } else {
+          console.error('initChatbot is not available');
+        }
+      }, 300); // try increasing to 500 if needed
     };
  
-    // Check if script is already loaded
-    const script = document.querySelector('script[src="https://back.techrecto.com/api/chatbot/script.js"]');
-    if (script && window.initChatbot) {
-      handleLoad();
-    } else if (script) {
-      script.addEventListener('load', handleLoad);
-    }
- 
-    return () => {
-      if (script) {
-        script.removeEventListener('load', handleLoad);
-      }
+    script.onerror = () => {
+      console.error('Failed to load chatbot script');
     };
+ 
+    document.body.appendChild(script);
   }, []);
  
-  return (
-    <Script
-      src="https://back.techrecto.com/api/chatbot/script.js"
-      strategy="afterInteractive"
-      crossOrigin="anonymous"
-    />
-  );
-};
- 
-export default Chatbot_Alwaqas;
+  return null;
+}

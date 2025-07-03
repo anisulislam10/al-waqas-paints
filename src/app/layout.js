@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Chatbot_Alwaqas from "@/components/Chatbot_Alwaqas";
+import ChatbotLoader from "@/components/Chatbot_Alwaqas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,7 +91,8 @@ export default function RootLayout({ children }) {
         </Link>
 
         {children}
-<Chatbot_Alwaqas/> 
+{/* <Chatbot_Alwaqas/>  */}
+<ChatbotLoader/>
         <Footer />
       </body>
     </html>
