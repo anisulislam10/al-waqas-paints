@@ -1,9 +1,7 @@
-import BAncillary from "@/components/berger/Ancillary";
-import BExterior from "@/components/berger/Exterior";
-import BInterior from "@/components/berger/Interior";
+import BWoodPro from "@/components/berger/WoodProRange";
 
 export const metadata = {
-  title: 'Al-Waqas Paint - Berger Ancillary products ',
+  title: 'Al-Waqas Paint - Berger Wood Pro ',
   description: 'Explore our premium range of paints including wall paints, silk finishes, and washable solutions',
 };
 
@@ -12,7 +10,7 @@ export default function BurgerInterior() {
     
       <>
       
-      <BAncillary />
+      <BWoodPro />
       
       </>
   );
