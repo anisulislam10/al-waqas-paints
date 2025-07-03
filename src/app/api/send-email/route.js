@@ -9,6 +9,15 @@ export async function POST(request) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
     }
 
+    const submittedDate = new Date().toLocaleString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+    });
+
     const transporter = nodemailer.createTransport({
       service: 'gmail', 
       auth: {
@@ -28,6 +37,7 @@ export async function POST(request) {
         Enquiry Type: ${enquiryType}
         Brand Name: ${brandName}
         Message: ${message}
+        Submitted On: ${submittedDate}
       `,
       html: `
         <h3>Al Waqas Paint New Quote Request from</h3>
@@ -36,6 +46,7 @@ export async function POST(request) {
         <p><strong>Enquiry Type:</strong> ${enquiryType}</p>
         <p><strong>Brand Name:</strong> ${brandName}</p>
         <p><strong>Message:</strong> ${message}</p>
+        <p><strong>Submitted On:</strong> ${submittedDate}</p>
       `,
     };
 
