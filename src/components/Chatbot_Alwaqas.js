@@ -3,7 +3,7 @@
 import Script from 'next/script';
 import { useEffect, useRef } from 'react';
  
-const Chatbot = () => {
+const Chatbot_Alwaqas = () => {
   const initAttempts = useRef(0);
   const maxAttempts = 5;
  
@@ -75,4 +75,4 @@ const Chatbot = () => {
   );
 };
  
-export default Chatbot;
+export default Chatbot_Alwaqas;

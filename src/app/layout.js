@@ -4,7 +4,7 @@ import Navbar from "./../components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import Chatbot from "@/components/chatbot";
+import Chatbot_Alwaqas from "@/components/Chatbot_Alwaqas";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,8 +90,7 @@ export default function RootLayout({ children }) {
         </Link>
 
         {children}
-  <Chatbot/>
- 
+<Chatbot_Alwaqas/> 
         <Footer />
       </body>
     </html>
