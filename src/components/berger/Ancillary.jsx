@@ -22,108 +22,80 @@ const BAncillary = () => {
     }));
   };
 
-  // Interior berger products data
+  // Ancillary berger products data
   const interiorProducts = [
     {
       id: 1,
-      title: "Silk Emulsion",
+      title: "PLASTRON WALL PRIMER",
       category: "Ancillary",
-      image: "/berger/products/1.webp",
+      image: "/berger/products/23.webp",
     
-      detailsLink: "/berger/int/silk-emulsion",
-      titleLink: "/berger/int/silk-emulsion",
+      detailsLink: "/berger/anc/plastron-wall-primer",
+      titleLink: "/berger/anc/plastron-wall-primer",
     },
     {
       id: 2,
-      title: "Elegance Emulsion",
+      title: "Red Oxide Primer",
       category: "Ancillary",
-      image: "/berger/products/2.webp",
+      image: "/berger/products/24.webp",
    
-      detailsLink: "/berger/int/elegance-emulsion",
-      titleLink: "/berger/int/elegance-emulsion",
+      detailsLink: "/berger/anc/red-oxide-primer",
+      titleLink: "/berger/anc/red-oxide-primer",
     },
     {
       id: 3,
-      title: "Elegance Desire",
+      title: "Synthetic Undercoat",
       category: "Ancillary",
-      image: "/berger/products/3.webp",
+      image: "/berger/products/25.webp",
    
-      detailsLink: "/berger/int/elegance-desire",
-      titleLink: "/berger/int/elegance-desire",
+      detailsLink: "/berger/anc/synthetic-undercoat",
+      titleLink: "/berger/anc/synthetic-undercoat",
     },
     {
       id: 4,
-      title: "VIP Allrounder",
+      title: "Duxbak",
       category: "Ancillary",
-      image: "/berger/products/4.webp",
+      image: "/berger/products/26.webp",
     
-      detailsLink: "/berger/int/vip-allrounder",
-      titleLink: "/berger/int/vip-allrounder",
+      detailsLink: "/berger/anc/duxbak",
+      titleLink: "/berger/anc/duxbak",
     },
     {
       id: 5,
-      title: "VIP SUPER GLOSS ENAMEL",
+      title: "Aluminum Paint",
       category: "Ancillary",
-      image: "/berger/products/5.webp",
+      image: "/berger/products/27.webp",
     
-      detailsLink: "/berger/int/vip-super-gloss-enamel",
-      titleLink: "/berger/int/vip-super-gloss-enamel",
+      detailsLink: "/berger/anc/aluminum-paint",
+      titleLink: "/berger/anc/aluminum-paint",
     },
     {
       id: 6,
-      title: "MAXPRO",
+      title: "Apexior No. 1",
       category: "Ancillary",
-      image: "/berger/products/6.webp",
+      image: "/berger/products/28.webp",
    
-      detailsLink: "/berger/int/maxpro",
-      titleLink: "/berger/int/maxpro",
+      detailsLink: "/berger/anc/apexior-no-1",
+      titleLink: "/berger/anc/apexior-no-1",
     },
     {
       id: 7,
-      title: "New SPD",
+      title: "Apexior No. 3",
       category: "Ancillary",
-      image: "/berger/products/7.webp",
+      image: "/berger/products/29.webp",
    
-      detailsLink: "/berger/int/new-spd",
-      titleLink: "/berger/int/new-spd",
+      detailsLink: "/berger/anc/apexior-no-3",
+      titleLink: "/berger/anc/apexior-no-3",
     },
     {
       id: 8,
-      title: "Top Super Emulsion",
+      title: "Chlorinated Rubber Base Paint",
       category: "Ancillary",
-      image: "/berger/products/8.webp",
+      image: "/berger/products/30.webp",
     
-      detailsLink: "/berger/int/top-super-emulsion",
-      titleLink: "/berger/int/top-super-emulsion",
+      detailsLink: "/berger/anc/chlorinated-rubber",
+      titleLink: "/berger/anc/chlorinated-rubber",
     },
-    {
-      id: 9,
-      title: "NU Emulsion",
-      category: "Ancillary",
-      image: "/berger/products/9.webp",
-  
-      detailsLink: "/berger/int/nu-emulsion",
-      titleLink: "/berger/int/nu-emulsion",
-    },
-    {
-      id: 10,
-      title: "NU ENAMEL",
-      category: "Ancillary",
-      image: "/berger/products/10.webp",
-    
-      detailsLink: "/berger/int/nu-enamel",
-      titleLink: "/berger/int/nu-enamel",
-    },
-    {
-      id: 11,
-      title: "Elegance Interior Putty",
-      category: "Ancillary",
-      image: "/berger/products/11.webp",
-   
-      detailsLink: "/berger/int/elegance-interior-putty",
-      titleLink: "/berger/int/elegance-interior-putty",
-    },
-    
     
   ];
 
