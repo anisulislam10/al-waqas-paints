@@ -137,7 +137,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className='hidden md:flex items-center space-x-2 font-bold'>
+          <nav className='hidden md:flex items-center space-x-1 font-bold'>
             <Link
               href='/'
               className={`px-3 py-2 text-sm font-bold ${
@@ -498,6 +498,17 @@ const Navbar = () => {
               }`}
             >
               Tools
+            </Link>
+
+            <Link
+              href='/ideas'
+              className={`px-3 py-2 text-sm font-bold ${
+                pathname === '/ideas'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
+              }`}
+            >
+              Ideas
             </Link>
             <Link
               href='/contact-us'
@@ -910,6 +921,19 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Tools
+          </Link>
+
+
+                  <Link
+            href='/ideas'
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              pathname === '/ideas'
+                ? 'text-blue-900 bg-blue-50'
+                : 'text-gray-700 hover:bg-blue-50'
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Ideas
           </Link>
 
           <Link
