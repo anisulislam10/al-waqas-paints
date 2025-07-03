@@ -4,6 +4,7 @@ import Navbar from "./../components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Chatbot from "@/components/chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,18 +90,7 @@ export default function RootLayout({ children }) {
         </Link>
 
         {children}
-   {/* <iframe
-      src="https://back.techrecto.com/api/chatbot/68658df2c4ca6e6adb909142/686588ceadec9f2263e6f753?domain=https%3A%2F%2Falwaqaspaint.com"
-      style={{
-        width: "400px",
-        height: "600px",
-        border: "none",
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-      }}
-      title="Al Waqas Paint Chatbot"
-    /> */}
+  <Chatbot/>
  
         <Footer />
       </body>
