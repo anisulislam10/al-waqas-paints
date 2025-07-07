@@ -55,7 +55,9 @@ export default function Guide() {
         <meta name="description" content="Estimate paint quantities for your house with Al-Waqas Paint's guide for 5, 8, 10, 12, 14 Marla, and 1 Kanal houses." />
         <meta name="keywords" content="paint estimation, Al-Waqas Paint, house painting, wall putty, primer, emulsion, weather shield" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="application/ld+json">
+    
+      </Head>
+          <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
@@ -67,7 +69,6 @@ export default function Guide() {
             },
           })}
         </script>
-      </Head>
 
       {/* Hero Section */}
       <section className="relative bg-red-800 text-white py-16">
