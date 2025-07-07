@@ -77,7 +77,7 @@ export default function Guide() {
           <p className="text-lg md:text-xl mb-6">
             Plan your painting project with Al-Waqas Paint’s rough estimation guide for various house sizes.
           </p>
-          <Link href="/contact" className="inline-block bg-white text-red-800 font-semibold py-2 px-6 rounded-lg hover:bg-gray-200 transition">
+          <Link href="/contact-us" className="inline-block bg-white text-red-800 font-semibold py-2 px-6 rounded-lg hover:bg-gray-200 transition">
               Contact Us
            
           </Link>
