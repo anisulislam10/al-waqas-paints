@@ -3,13 +3,25 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Interior = () => {
-  // State for expanded menu items
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [expandedMenus, setExpandedMenus] = useState({
     waterBased: true,
+    interiorEmulsion: false,
+    mattEnamel: false,
+    texturedSeries: false,
   });
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  // Update active category based on query parameter
+  useEffect(() => {
+    const category = searchParams.get("category");
+    setActiveCategory(category || "all");
+  }, [searchParams]);
 
   // Toggle menu expansion
   const toggleMenu = (menu) => {
@@ -24,7 +36,7 @@ const Interior = () => {
     {
       id: 1,
       title: "Nippon Odour~Less AirCare",
-      category: "Interior",
+      category: "Water Based Matt Emulsion",
       image: "/Odourless-Air-Care.png",
       detailsLink: "/products/nippon-odourless-aircare",
       titleLink: "/products/nippon-odourless-aircare",
@@ -32,7 +44,7 @@ const Interior = () => {
     {
       id: 2,
       title: "Nippon Spot-Less Matt Emulsion",
-      category: "Interior",
+      category: "Water Based Matt Emulsion",
       image: "/spot-less-2.png",
       detailsLink: "/products/nippon-spot-less",
       titleLink: "/products/nippon-spot-less",
@@ -40,7 +52,7 @@ const Interior = () => {
     {
       id: 3,
       title: "Nippon Easywash",
-      category: "Interior",
+      category: "Water Based Matt Emulsion",
       image: "/easy-wash.png",
       detailsLink: "/products/easywash",
       titleLink: "/products/easywash",
@@ -48,10 +60,114 @@ const Interior = () => {
     {
       id: 4,
       title: "Nippon Glamour",
-      category: "Interior",
+      category: "Water Based Matt Emulsion",
       image: "/Glamour-min-1.png",
       detailsLink: "/products/glamour",
       titleLink: "/products/glamour",
+    },
+    {
+      id: 5,
+      title: "Nippon Matex Pro Emulsion - White Bucket",
+      category: "Interior Emulsion",
+      image: "/Matex-Pro-1-1.png",
+      detailsLink: "/products/nippon-matex-pro",
+      titleLink: "/products/nippon-matex-pro",
+    },
+    {
+      id: 6,
+      title: "Nippon Quality Emulsion",
+      category: "Interior Emulsion",
+      image: "/Group-12966.png",
+      detailsLink: "/products/nippon-quality-emulsion",
+      titleLink: "/products/nippon-quality-emulsion",
+    },
+    {
+      id: 7,
+      title: "Nippon Easy Coat Emulsion",
+      category: "Interior Emulsion",
+      image: "/easy-coat-1.png",
+      detailsLink: "/products/nippon-easy-coat",
+      titleLink: "/products/nippon-easy-coat",
+    },
+    {
+      id: 8,
+      title: "Nippon Super Matex Emulsion",
+      category: "Interior Emulsion",
+      image: "/super-matex-1.png",
+      detailsLink: "/products/nippon-super-matex",
+      titleLink: "/products/nippon-super-matex",
+    },
+    {
+      id: 9,
+      title: "Nippon Matex Gold Emulsion",
+      category: "Interior Emulsion",
+      image: "/matex-gold-1.png",
+      detailsLink: "/products/nippon-matex-gold",
+      titleLink: "/products/nippon-matex-gold",
+    },
+    {
+      id: 10,
+      title: "Nippon Perfect Emulsion",
+      category: "Interior Emulsion",
+      image: "/Perfect-Emulsion.png",
+      detailsLink: "/products/nippon-perfect-emulsion",
+      titleLink: "/products/nippon-perfect-emulsion",
+    },
+    {
+      id: 11,
+      title: "Nippon Crystal Matt Enamel",
+      category: "Matt Enamel",
+      image: "/Crystal-Matt-Packshot-2-min-1.png",
+      detailsLink: "/products/nippon-crystal-matt-enamel",
+      titleLink: "/products/nippon-crystal-matt-enamel",
+    },
+    {
+      id: 12,
+      title: "Nippon Brilliance Matt Enamel",
+      category: "Matt Enamel",
+      image: "/Brilliance-Matt-Enamel-1.png",
+      detailsLink: "/products/nippon-brilliance-matt-enamel",
+      titleLink: "/products/nippon-brilliance-matt-enamel",
+    },
+    {
+      id: 13,
+      title: "Nippon Satin Glo Matt Enamel",
+      category: "Matt Enamel",
+      image: "/satin-glo-web-image.jpg",
+      detailsLink: "/products/nippon-satin-glo-matt-enamel",
+      titleLink: "/products/nippon-satin-glo-matt-enamel",
+    },
+    {
+      id: 14,
+      title: "Nippon Momento - Gold Frost",
+      category: "Textured Series",
+      image: "/Momento-Special-Effect-sparkle-gold.png",
+      detailsLink: "/products/nippon-momento-gold-frost",
+      titleLink: "/products/nippon-momento-gold-frost",
+    },
+    {
+      id: 15,
+      title: "Nippon Momento - Pearl Frost",
+      category: "Textured Series",
+      image: "/Momento-Special-Effect-sparkle-pearl.png",
+      detailsLink: "/products/nippon-momento-pearl-frost",
+      titleLink: "/products/nippon-momento-pearl-frost",
+    },
+    {
+      id: 16,
+      title: "Nippon Texture Nippon'eon",
+      category: "Textured Series",
+      image: "/Nippon-texture-nippeon.png",
+      detailsLink: "/products/nippon-texture-nipponeon",
+      titleLink: "/products/nippon-texture-nipponeon",
+    },
+    {
+      id: 17,
+      title: "Nippon Momento - Snow Frost",
+      category: "Textured Series",
+      image: "/Momento-Special-Effect-spark-silver.png",
+      detailsLink: "/products/nippon-momento-snow-frost",
+      titleLink: "/products/nippon-momento-snow-frost",
     },
   ];
 
@@ -60,15 +176,75 @@ const Interior = () => {
     {
       title: "Water Based Matt Emulsion",
       items: [
-        { name: "Overview", link: "/products/interior" },
-        ...interiorProducts.map((product) => ({
-          name: product.title,
-          link: product.detailsLink,
-        })),
+        { name: "Overview", link: "/products/interior?category=waterBased" },
+        ...interiorProducts
+          .filter((product) => product.category === "Water Based Matt Emulsion")
+          .map((product) => ({
+            name: product.title,
+            link: product.detailsLink,
+          })),
       ],
       key: "waterBased",
     },
+    {
+      title: "Interior Emulsion",
+      items: [
+        { name: "Overview", link: "/products/interior?category=interiorEmulsion" },
+        ...interiorProducts
+          .filter((product) => product.category === "Interior Emulsion")
+          .map((product) => ({
+            name: product.title,
+            link: product.detailsLink,
+          })),
+      ],
+      key: "interiorEmulsion",
+    },
+    {
+      title: "Matt Enamel",
+      items: [
+        { name: "Overview", link: "/products/interior?category=mattEnamel" },
+        ...interiorProducts
+          .filter((product) => product.category === "Matt Enamel")
+          .map((product) => ({
+            name: product.title,
+            link: product.detailsLink,
+          })),
+      ],
+      key: "mattEnamel",
+    },
+    {
+      title: "Textured Series",
+      items: [
+        { name: "Overview", link: "/products/interior?category=texturedSeries" },
+        ...interiorProducts
+          .filter((product) => product.category === "Textured Series")
+          .map((product) => ({
+            name: product.title,
+            link: product.detailsLink,
+          })),
+      ],
+      key: "texturedSeries",
+    },
   ];
+
+  // Filter products based on active category
+  const filteredProducts =
+    activeCategory === "all"
+      ? interiorProducts
+      : interiorProducts.filter((product) => {
+          switch (activeCategory) {
+            case "waterBased":
+              return product.category === "Water Based Matt Emulsion";
+            case "interiorEmulsion":
+              return product.category === "Interior Emulsion";
+            case "mattEnamel":
+              return product.category === "Matt Enamel";
+            case "texturedSeries":
+              return product.category === "Textured Series";
+            default:
+              return true;
+          }
+        });
 
   // Structured data for the /products/interior page
   const structuredData = {
@@ -79,7 +255,7 @@ const Interior = () => {
         "@id": "https://al-waqas-paints.vercel.app/products/interior/#webpage",
         "url": "https://al-waqas-paints.vercel.app/products/interior",
         "name": "Interior Paints | Al-Waqas Paint",
-        "description": "Explore our range of water-based matt emulsion interior paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, and Glamour.",
+        "description": "Explore our range of water-based matt emulsion, interior emulsion, matt enamel, and textured series paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, Glamour, Matex Pro, Quality Emulsion, Easy Coat, Super Matex, Matex Gold, Perfect Emulsion, Crystal Matt Enamel, Brilliance Matt Enamel, Satin Glo Matt Enamel, Momento Gold Frost, Momento Pearl Frost, Texture Nippon'eon, and Momento Snow Frost.",
         "inLanguage": "en-PK",
         "isPartOf": {
           "@id": "https://al-waqas-paints.vercel.app/#website"
@@ -93,8 +269,8 @@ const Interior = () => {
       },
       {
         "@type": "ItemList",
-        "name": "Water Based Matt Emulsion Paints",
-        "itemListElement": interiorProducts.map((product, index) => ({
+        "name": "Interior Paints",
+        "itemListElement": filteredProducts.map((product, index) => ({
           "@type": "ListItem",
           "position": index + 1,
           "item": {
@@ -104,7 +280,7 @@ const Interior = () => {
             "image": `https://al-waqas-paints.vercel.app${product.image}`,
             "description": `Premium ${product.title} interior paint by Nippon for durable and vibrant finishes.`,
             "sku": `NIP-${String(product.id).padStart(3, "0")}`,
-            "category": "Interior Paints",
+            "category": product.category,
             "brand": {
               "@type": "Brand",
               "name": "Nippon"
@@ -112,7 +288,7 @@ const Interior = () => {
             "offers": {
               "@type": "Offer",
               "priceCurrency": "PKR",
-              "price": product.id === 1 ? "5000" : product.id === 2 ? "5500" : product.id === 3 ? "5200" : "5300", // Placeholder prices
+              "price": product.id <= 4 ? (product.id === 1 ? "5000" : product.id === 2 ? "5500" : product.id === 3 ? "5200" : "5300") : "5100", // Placeholder prices
               "availability": "http://schema.org/InStock",
               "url": `https://al-waqas-paints.vercel.app${product.detailsLink}`
             }
@@ -144,7 +320,7 @@ const Interior = () => {
           {
             "@type": "ListItem",
             "position": 4,
-            "name": "Water Based Matt Emulsion",
+            "name": "Interior Paints",
             "item": "https://al-waqas-paints.vercel.app/products/interior"
           }
         ]
@@ -158,14 +334,13 @@ const Interior = () => {
         <title>Interior Paints | Al-Waqas Paint</title>
         <meta
           name="description"
-          content="Explore our range of water-based matt emulsion interior paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, and Glamour."
+          content="Explore our range of water-based matt emulsion, interior emulsion, matt enamel, and textured series paints from Nippon, including Odour-less AirCare, Spot-Less, Easywash, Glamour, Matex Pro, Quality Emulsion, Easy Coat, Super Matex, Matex Gold, Perfect Emulsion, Crystal Matt Enamel, Brilliance Matt Enamel, Satin Glo Matt Enamel, Momento Gold Frost, Momento Pearl Frost, Texture Nippon'eon, and Momento Snow Frost."
         />
-        
       </Head>
-<script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Breadcrumb Navigation */}
       <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">
@@ -198,7 +373,7 @@ const Interior = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-gray-700 font-medium">Water Based Matt Emulsion</span>
+            <span className="text-gray-700 font-medium">Interior Paints</span>
           </li>
         </ol>
       </nav>
@@ -246,10 +421,12 @@ const Interior = () => {
 
         {/* Main Content */}
         <div className="flex-1">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Water Based Matt Emulsion</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {activeCategory === "all" ? "Interior Paints" : sidebarMenus.find((menu) => menu.key === activeCategory)?.title || "Interior Paints"}
+          </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {interiorProducts.map((product) => (
+            {filteredProducts.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
