@@ -1,44 +1,38 @@
-'use client';
 import { useEffect } from 'react';
- 
+
 export default function ChatbotLoader() {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://back.techrecto.com/api/chatbot/script.js';
     script.async = true;
     script.crossOrigin = 'anonymous';
- 
+
     script.onload = () => {
       window.ChatbotConfig = {
-        flowId: '68658df2c4ca6e6adb909142',
-        userId: '686588ceadec9f2263e6f753',
-        websiteDomain: 'https://www.alwaqaspaint.com',
-        position: 'bottom-right',
+        flowId: "6867b66630bf09c5634e9e5e",
+        userId: "686547c645cf8b6b8a7d157d",
+        websiteDomain: "https://www.alwaqaspaint.com",
+        position: "bottom-right",
         theme: {
-          primary: '#6366f1',
-          secondary: '#f59e0b',
-          background: '#ffffff',
-          text: '#1f2937'
+          primary: "#7C3AED",
+          secondary: "#F59E0B",
+          background: "#FFFFFF",
+          text: "#1F2937",
+          buttonText: "#FFFFFF"
         }
       };
- 
-      // Wait a bit to make sure DOM is ready
       setTimeout(() => {
         if (window.initChatbot) {
-          console.log('[ChatbotLoader] Calling initChatbot');
           window.initChatbot();
-        } else {
-          console.error('initChatbot is not available');
         }
-      }, 300); // try increasing to 500 if needed
+      }, 300);
     };
- 
-    script.onerror = () => {
-      console.error('Failed to load chatbot script');
-    };
- 
+
     document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
- 
+
   return null;
 }
