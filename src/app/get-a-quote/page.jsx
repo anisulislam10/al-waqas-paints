@@ -107,7 +107,7 @@ const QuoteForm = () => {
                   className={`mt-1 block w-full px-4 py-3 border ${
                     errors.fullName ? 'border-red-500' : 'border-gray-300'
                   } rounded-lg bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600`}
-                  placeholder="Anisul"
+                  placeholder="Your Full Name"
                   value={formData.fullName}
                   onChange={handleChange}
                   aria-invalid={!!errors.fullName}
@@ -139,7 +139,7 @@ const QuoteForm = () => {
                   className={`mt-1 block w-full px-4 py-3 border ${
                     errors.phone ? 'border-red-500' : 'border-gray-300'
                   } rounded-lg bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600`}
-                  placeholder="03431234567"
+                  placeholder="Phone No"
                   value={formData.phone}
                   onChange={handleChange}
                   aria-invalid={!!errors.phone}
