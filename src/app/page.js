@@ -10,8 +10,26 @@ import MetaPixel from '@/components/MetaPixel';
 // Export metadata for SEO (App Router style)
 export const metadata = {
   title: "Al-Waqas Paint | Premium Coatings",
-  description: "Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
+  description: "Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces.",
+  keywords: "Nippon paint, Dulux paint, premium coatings, interior paint, exterior paint, eco-friendly paint, Islamabad paint store",
+  author: "Al-Waqas Paint",
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  openGraph: {
+    title: "Al-Waqas Paint | Premium Coatings",
+    description: "Explore high-quality Nippon and Dulux paints for interiors, exteriors, and specialty surfaces at Al-Waqas Paint.",
+    url: "https://alwaqaspaint.com",
+    type: "website",
+    site_name: "Al-Waqas Paint",
+  },
+  facebook: {
+    card: "summary_large_image",
+    title: "Al-Waqas Paint | Premium Coatings",
+    description: "Discover premium Nippon and Dulux coatings for all surfaces at Al-Waqas Paint.",
+    site: "@alwaqaspaint",
+  },
 };
+
 
 // Server Component (default in App Router)
 export default function Home() {
@@ -28,17 +46,28 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-    <Head>
+     <Head>
         <title>Al-Waqas Paint | Premium Coatings</title>
-        <meta
-          name="description"
-          content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces."
-        />
-        <meta 
-          name="google-site-verification" 
-          content="OKgEj979FUP2uM4YpOCngAKYTlaFD-uTz7TiZOTD9Fg" 
-        />
-        <MetaPixel/>
+        <meta name="description" content="Discover premium Nippon and Dulux coatings for interiors, exteriors, and specialty surfaces." />
+        <meta name="keywords" content="Nippon paint, Dulux paint, premium coatings, interior paint, exterior paint, eco-friendly paint, Islamabad paint store, Al waqas paint, Alwaqas paint" />
+        <meta name="author" content="Al-Waqas Paint" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="OKgEj979FUP2uM4YpOCngAKYTlaFD-uTz7TiZOTD9Fg" />
+        <meta property="og:title" content="Al-Waqas Paint | Premium Coatings" />
+        <meta property="og:description" content="Explore high-quality Nippon and Dulux paints for interiors, exteriors, and specialty surfaces at Al-Waqas Paint." />
+        <meta property="og:url" content="https://alwaqaspaint.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://alwaqaspaint.com/logoal-.png" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="Al-Waqas Paint Logo" />
+        <meta property="og:site_name" content="Al-Waqas Paint" />
+        <meta name="facebook:title" content="Al-Waqas Paint | Premium Coatings" />
+        <meta name="facebook:description" content="Discover premium Nippon and Dulux coatings for all surfaces at Al-Waqas Paint." />
+        <meta name="facebook:site" content="@alwaqaspaint" />
+        <link rel="canonical" href="https://alwaqaspaint.com" />
+        <MetaPixel />
       </Head>
 
 <Script
