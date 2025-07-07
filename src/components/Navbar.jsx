@@ -169,8 +169,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith('/products')
-                    ? 'text-red-600 border-b-2 border-blue-900'
-                    : 'text-red-700 hover:text-red-800'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
                 }`}
               >
                 Nippon
@@ -251,8 +251,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith('/dulux')
-                    ? 'text-blue-800 border-b-2 border-blue-900'
-                    : 'text-blue-800 hover:text-blue-700'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
                 }`}
               >
                 Dulux
@@ -335,8 +335,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith('/master')
-                    ? 'text-blue-900 border-b-2 border-blue-900'
-                    : 'text-blue-700 hover:text-blue-800'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
                 }`}
               >
                 Master
@@ -416,8 +416,8 @@ const Navbar = () => {
               <button
                 className={`px-3 py-2 text-sm font-bold flex items-center ${
                   pathname.startsWith('/berger')
-                    ? 'text-blue-800 border-b-2 border-blue-900'
-                    : 'text-blue-800 hover:text-blue-700'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
                 }`}
               >
                 Berger
