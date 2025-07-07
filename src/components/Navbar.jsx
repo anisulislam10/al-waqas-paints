@@ -510,6 +510,20 @@ const Navbar = () => {
             >
               Ideas
             </Link>
+
+
+{/* guide */}
+<Link
+              href='/guide'
+              className={`px-3 py-2 text-sm font-bold ${
+                pathname === '/guide'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
+              }`}
+            >
+              Guide
+            </Link>
+
             <Link
               href='/contact-us'
               className={`px-3 py-2 text-sm font-bold ${
@@ -534,7 +548,18 @@ const Navbar = () => {
                 viewBox='0 0 24 24'
                 stroke='currentColor'
               >
-                {isMobileMenuOpen ? (
+              <Link
+              href='/ideas'
+              className={`px-3 py-2 text-sm font-bold ${
+                pathname === '/ideas'
+                  ? 'text-blue-900 border-b-2 border-blue-900'
+                  : 'text-gray-700 hover:text-blue-900'
+              }`}
+            >
+              Ideas
+            </Link>
+            
+               {isMobileMenuOpen ? (
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
@@ -934,6 +959,20 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Ideas
+          </Link>
+
+
+          {/* guide */}
+                 <Link
+            href='/guide'
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              pathname === '/guide'
+                ? 'text-blue-900 bg-blue-50'
+                : 'text-gray-700 hover:bg-blue-50'
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Guide
           </Link>
 
           <Link

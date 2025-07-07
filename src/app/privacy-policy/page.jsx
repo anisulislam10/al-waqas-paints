@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             For questions or concerns, contact us at:
           </p>
           <ul className="list-disc pl-5">
-            <li><strong>Email</strong>: <a href="mailto:com.alwaqaspaint.com" className="text-blue-600 hover:underline">info@alwaqaspaint.com</a></li>
+            <li><strong>Email</strong>: <a href="mailto:info@alwaqaspaint.com" className="text-blue-600 hover:underline">info@alwaqaspaint.com</a></li>
             <li><strong>Phone</strong>: +92 333 5093223</li>
             <li><strong>Address</strong>: Shop 1 & 2, Raja Plaza, Duhma Patak Ternol, Islamabad, Pakistan</li>
           </ul>
