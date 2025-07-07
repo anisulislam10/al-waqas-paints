@@ -277,24 +277,34 @@ export default function Home() {
     </p>
 
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-      <a
-        href="#product-categories"
-        className="inline-block bg-[#E50019] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#FF0A23] transition-colors duration-200 text-sm sm:text-base"
-      >
-        Explore Our Categories
-      </a>
-      <Link href="/get-a-quote"
-        className="inline-block bg-[#1C097A] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#2410A0] transition-colors duration-200 text-sm sm:text-base"
-      >
-        Get a Quote
-      </Link>
-      <a
-        href="https://wa.me/+923335093223"
-        className="inline-block bg-green-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-green-500 transition-colors duration-200 text-sm sm:text-base"
-      >
-        WhatsApp
-      </a>
-    </div>
+  <a
+    href="#product-categories"
+    className="inline-flex items-center bg-[#E50019] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#FF0A23] transition-colors duration-200 text-sm sm:text-base"
+  >
+    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+    Explore Our Categories
+  </a>
+  <Link href="/get-a-quote"
+    className="inline-flex items-center bg-[#1C097A] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-[#2410A0] transition-colors duration-200 text-sm sm:text-base"
+  >
+    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+    </svg>
+    Get a Quote
+  </Link>
+<a
+    href="https://wa.me/+923335093223"
+    className="inline-flex items-center bg-green-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-green-500 transition-colors duration-200 text-sm sm:text-base"
+>
+    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.134.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.074-.149-.669-.719-.911-.99-.242-.272-.472-.447-.693-.447-.222 0-.445.074-.643.223-.297.297-1.125 1.093-1.125 2.664 0 1.57 1.144 3.089 1.307 3.287.173.198 2.255 3.367 5.473 4.722.744.347 1.328.556 1.78.669.471.124.892.099 1.227.074.347-.025 1.05-.396 1.198-.793.149-.396.149-.743.074-.892-.074-.149-.297-.297-.595-.446z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    WhatsApp
+</a>
+</div>
   </div>
 </section>
         {/* Product Categories Section */}
