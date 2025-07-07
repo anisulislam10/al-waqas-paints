@@ -3,18 +3,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-const Interior = () => {
-  const router = useRouter();
+// Client Component to handle useSearchParams and product filtering
+const ProductList = ({ interiorProducts, sidebarMenus }) => {
   const searchParams = useSearchParams();
-  const [expandedMenus, setExpandedMenus] = useState({
-    waterBased: true,
-    interiorEmulsion: false,
-    mattEnamel: false,
-    texturedSeries: false,
-  });
   const [activeCategory, setActiveCategory] = useState("all");
 
   // Update active category based on query parameter
@@ -22,6 +16,81 @@ const Interior = () => {
     const category = searchParams.get("category");
     setActiveCategory(category || "all");
   }, [searchParams]);
+
+  // Filter products based on active category
+  const filteredProducts =
+    activeCategory === "all"
+      ? interiorProducts
+      : interiorProducts.filter((product) => {
+          switch (activeCategory) {
+            case "waterBased":
+              return product.category === "Water Based Matt Emulsion";
+            case "interiorEmulsion":
+              return product.category === "Interior Emulsion";
+            case "mattEnamel":
+              return product.category === "Matt Enamel";
+            case "texturedSeries":
+              return product.category === "Textured Series";
+            default:
+              return true;
+          }
+        });
+
+  return (
+    <div className="flex-1">
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        {activeCategory === "all"
+          ? "Interior Paints"
+          : sidebarMenus.find((menu) => menu.key === activeCategory)?.title ||
+            "Interior Paints"}
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProducts.map((product) => (
+          <div
+            key={product.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <Link href={product.detailsLink} className="block">
+              <div className="relative h-48 w-full">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+            </Link>
+
+            <div className="p-4">
+              <Link href={product.titleLink}>
+                <h3 className="text-lg font-semibold text-blue-700 mb-1 hover:text-blue-700 transition-colors">
+                  {product.title}
+                </h3>
+              </Link>
+              <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
+              <a href="tel:+923335093223">
+                <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
+                  Call Now
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Interior = () => {
+  const router = useRouter();
+  const [expandedMenus, setExpandedMenus] = useState({
+    waterBased: true,
+    interiorEmulsion: false,
+    mattEnamel: false,
+    texturedSeries: false,
+  });
 
   // Toggle menu expansion
   const toggleMenu = (menu) => {
@@ -227,25 +296,6 @@ const Interior = () => {
     },
   ];
 
-  // Filter products based on active category
-  const filteredProducts =
-    activeCategory === "all"
-      ? interiorProducts
-      : interiorProducts.filter((product) => {
-          switch (activeCategory) {
-            case "waterBased":
-              return product.category === "Water Based Matt Emulsion";
-            case "interiorEmulsion":
-              return product.category === "Interior Emulsion";
-            case "mattEnamel":
-              return product.category === "Matt Enamel";
-            case "texturedSeries":
-              return product.category === "Textured Series";
-            default:
-              return true;
-          }
-        });
-
   // Structured data for the /products/interior page
   const structuredData = {
     "@context": "https://schema.org",
@@ -270,7 +320,7 @@ const Interior = () => {
       {
         "@type": "ItemList",
         "name": "Interior Paints",
-        "itemListElement": filteredProducts.map((product, index) => ({
+        "itemListElement": interiorProducts.map((product, index) => ({
           "@type": "ListItem",
           "position": index + 1,
           "item": {
@@ -288,7 +338,7 @@ const Interior = () => {
             "offers": {
               "@type": "Offer",
               "priceCurrency": "PKR",
-              "price": product.id <= 4 ? (product.id === 1 ? "5000" : product.id === 2 ? "5500" : product.id === 3 ? "5200" : "5300") : "5100", // Placeholder prices
+              "price": product.id <= 4 ? (product.id === 1 ? "5000" : product.id === 2 ? "5500" : product.id === 3 ? "5200" : "5300") : "5100",
               "availability": "http://schema.org/InStock",
               "url": `https://al-waqas-paints.vercel.app${product.detailsLink}`
             }
@@ -341,7 +391,6 @@ const Interior = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      {/* Breadcrumb Navigation */}
       <nav className="flex mb-6 bg-gray-100 p-3 rounded-lg max-w-7xl mx-auto" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2 text-sm text-gray-500">
           <li>
@@ -379,7 +428,6 @@ const Interior = () => {
       </nav>
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
-        {/* Sidebar */}
         <div className="w-full md:w-64 flex-shrink-0">
           <div className="bg-white rounded-lg shadow-md p-4 sticky top-8">
             <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Interior</h3>
@@ -419,53 +467,9 @@ const Interior = () => {
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {activeCategory === "all" ? "Interior Paints" : sidebarMenus.find((menu) => menu.key === activeCategory)?.title || "Interior Paints"}
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                {/* Product Image - Links to details page */}
-                <Link href={product.detailsLink} className="block">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                </Link>
-
-                <div className="p-4">
-                  {/* Product Title - Links to separate page */}
-                  <Link href={product.titleLink}>
-                    <h3 className="text-lg font-semibold text-blue-700 mb-1 hover:text-blue-700 transition-colors">
-                      {product.title}
-                    </h3>
-                  </Link>
-
-                  {/* Product Category */}
-                  <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
-
-                  {/* Buy Now Button */}
-                  <a href="tel:+923335093223">
-                    <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
-                      Call Now
-                    </button>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Suspense fallback={<div>Loading products...</div>}>
+          <ProductList interiorProducts={interiorProducts} sidebarMenus={sidebarMenus} />
+        </Suspense>
       </div>
     </div>
   );
