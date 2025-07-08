@@ -114,34 +114,48 @@ className="min-h-[60vh] flex items-center justify-center bg-[url('/bg_about_conv
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white mb-2">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-extrabold mb-4">Ready to Transform Your Space?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Contact us for expert guidance or explore our premium paint collections.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center px-8 py-4 bg-green-700 rounded-full font-semibold hover:bg-green-800 transition-colors duration-300"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/products/interior"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
-              >
-                Explore Nippon Products
-              </Link>
-              <Link
-                href="/dulux/interior"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
-              >
-                Explore Dulux Products
-              </Link>
-            </div>
-          </div>
-        </section>
+<section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white mb-2">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 text-center">
+    <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+      Ready to Transform Your Space?
+    </h2>
+    <p className="text-base sm:text-lg mb-8 max-w-xl sm:max-w-2xl mx-auto">
+      Contact us for expert guidance or explore our premium paint collections.
+    </p>
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
+      <Link
+        href="/contact-us"
+        className="inline-flex justify-center items-center w-48 sm:w-56 py-3 sm:py-4 bg-green-700 rounded-full hover:bg-green-800 transition-colors duration-300 text-sm sm:text-base font-semibold"
+      >
+        Contact Us
+      </Link>
+      <Link
+        href="/products/interior"
+        className="inline-flex justify-center items-center w-48 sm:w-56 py-3 sm:py-4 bg-white text-blue-900 rounded-full hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base font-semibold"
+      >
+        Explore Nippon Products
+      </Link>
+      <Link
+        href="/dulux/interior"
+        className="inline-flex justify-center items-center w-48 sm:w-56 py-3 sm:py-4 bg-white text-blue-900 rounded-full hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base font-semibold"
+      >
+        Explore Dulux Products
+      </Link>
+      <Link
+        href="/master/interior"
+        className="inline-flex justify-center items-center w-48 sm:w-56 py-3 sm:py-4 bg-white text-blue-900 rounded-full hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base font-semibold"
+      >
+        Explore Master Products
+      </Link>
+      <Link
+        href="/berger/interior"
+        className="inline-flex justify-center items-center w-48 sm:w-56 py-3 sm:py-4 bg-white text-blue-900 rounded-full hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base font-semibold"
+      >
+        Explore Berger Products
+      </Link>
+    </div>
+  </div>
+</section>
       </main>
     </div>
   );
