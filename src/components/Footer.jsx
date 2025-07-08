@@ -21,10 +21,20 @@ const Footer = () => {
 
   // Berger product links (new addition)
   const bergerProductLinks = [
-    { name: 'Interior Paints', href: 'berger/interior' },
+    { name: 'Interior Paints', href: '/berger/interior' },
     { name: 'Exterior Paints', href: '/berger/exterior' },
-    { name: 'Ancillary', href: 'berger/ancillary-products' },
-    { name: 'WoodPro Range', href: 'berger/wood-pro-range' },
+    { name: 'Ancillary', href: '/berger/ancillary-products' },
+    { name: 'WoodPro Range', href: '/berger/wood-pro-range' },
+  ];
+
+  // Quick Links (new addition)
+  const quickLinks = [
+    { name: 'About', href: '/about' },
+    { name: 'Blogs', href: '/blogs' },
+    { name: 'Guide', href: '/guide' },
+    { name: 'Ideas', href: '/ideas' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+
   ];
 
   // Branch details
@@ -52,8 +62,8 @@ const Footer = () => {
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Section: Intro, Nippon, Dulux, Berger */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Top Section: Intro, Nippon, Dulux, Berger, Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Intro Section */}
           <div>
             <img
@@ -62,7 +72,7 @@ const Footer = () => {
               className="mb-4 bg-white h-16 w-38"
             />
             <p className="text-sm text-gray-300">
-              Al-Waqas Paint proudly offers premium Nippon, Dulux, and Berger coatings for interior, exterior, and specialty surfaces. With an unwavering commitment to excellence, innovation, and environmental sustainability, we deliver vibrant, long-lasting, and eco-conscious solutions that transform spaces with enduring beauty and superior quality.
+              Al-Waqas Paint proudly offers premium Nippon, Dulux, and Berger coatings for interior, exterior, and specialty surfaces. With an unwavering commitment to excellence, innovation, and environmental sustainability.
             </p>
           </div>
 
@@ -105,6 +115,23 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Berger Products</h3>
             <ul className="space-y-2">
               {bergerProductLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-300 hover:text-blue-100 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links Section */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
