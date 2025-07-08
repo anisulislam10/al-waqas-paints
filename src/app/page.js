@@ -150,7 +150,7 @@ export default function Home() {
             "latitude": "33.5533",
             "longitude": "73.1738"
           },
-          "telephone": ["+923335093223", "+92515709115"],
+          "telephone": ["+923165800002", "+92515709115"],
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -295,7 +295,7 @@ export default function Home() {
     Get a Quote
   </Link>
 <a
-    href="https://wa.me/+923335093223"
+    href="https://wa.me/+923165800002"
     className="inline-flex items-center bg-green-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-md font-bold hover:bg-green-500 transition-colors duration-200 text-sm sm:text-base"
 >
     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -456,8 +456,8 @@ export default function Home() {
             <svg className="w-5 h-5 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.18 1.13.57 2.37.97 3.67.97.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C9.54 21 3 14.46 3 6.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.3.4 2.54.97 3.67.18.35.09.75-.18 1.02l-2.2 2.2z" />
             </svg>
-            <a href="tel:03335093223" className="text-gray-700 hover:text-blue-900">
-              0333 5093223
+            <a href="tel:+923165800002" className="text-gray-700 hover:text-blue-900">
+              +92 316 5800002
             </a>
           </div>
           <div className="flex items-center gap-3">

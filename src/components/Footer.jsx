@@ -38,7 +38,7 @@ const Footer = () => {
     {
       name: 'DHA Islamabad Branch',
       address: 'Nadir Plaza, Opposite Lignum Tower, DHA 2, Near Al Janat Mall, GT Road, Islamabad, Pakistan',
-      phones: ['+923335093223', '0515709115'],
+      phones: ['+923165800002', '0515709115'],
       email: 'info@alwaqaspaint.com',
     },
     {

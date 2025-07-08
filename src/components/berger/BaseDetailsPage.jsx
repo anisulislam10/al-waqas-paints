@@ -84,7 +84,7 @@ const BBaseDetailsPage = ({ product }) => {
                 <p className="text-black text-lg leading-relaxed">{product.Coverage}</p>
               </div>
               <div className="mt-6">
-                <a href="tel:+923335093223">
+                <a href="tel:+923165800002">
                   <button
                     className="w-full bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-800 transition-colors text-lg font-semibold"
                     aria-label="Call to inquire about the product"
