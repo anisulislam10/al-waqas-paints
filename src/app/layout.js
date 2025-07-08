@@ -54,7 +54,7 @@ const WhatsAppIcon = () => (
 );
 
 export default function RootLayout({ children }) {
-  const whatsappNumber = "+923335093223";
+  const whatsappNumber = "+923165800002";
   const whatsappMessage = "Hello, I have a query about Al Waqas Paint!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
