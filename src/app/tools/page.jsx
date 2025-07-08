@@ -139,7 +139,7 @@ export default function ToolsPage() {
                   {tool.description}
                 </p>
                 <a
-                  href="tel:+923165800002"
+                  href="tel:+923335093223"
                   className="inline-block bg-green-700 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-md font-bold hover:bg-green-800 transition-colors duration-200 text-center text-sm sm:text-base"
                   aria-label={`Call to inquire about ${tool.name}`} // Fix 5: Add accessibility
                 >
