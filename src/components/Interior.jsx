@@ -70,7 +70,7 @@ const ProductList = ({ interiorProducts, sidebarMenus }) => {
                 </h3>
               </Link>
               <p className="text-sm text-gray-500 mb-2">✔ {product.category}</p>
-              <a href="tel:+923335093223">
+              <a href="tel:+923165800002">
                 <button className="w-full bg-green-700 text-white py-2 px-4 rounded-md hover:bg-green-800 transition-colors">
                   Call Now
                 </button>

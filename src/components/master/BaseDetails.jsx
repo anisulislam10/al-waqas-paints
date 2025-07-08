@@ -103,7 +103,7 @@ const MBaseDetailsPage = ({ product }) => {
             
 
               {/* Call Now Button */}
-              <a href="tel:+923335093223">
+              <a href="tel:+923165800002">
                 <button className="w-full bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-800 transition-colors text-lg font-semibold">
                   Call Now
                 </button>
