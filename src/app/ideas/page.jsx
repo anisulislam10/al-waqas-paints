@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import DesignSugg from "@/components/DesignSuggesstions";
 
 const ideas = [
   {
@@ -117,6 +118,8 @@ export default function Ideas() {
             ))}
           </div>
         </div>
+        <DesignSugg/>
+
       </section>
 
       {/* Structured Data for Breadcrumb */}
