@@ -65,7 +65,7 @@ export default function DesignSugg() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-6xl bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8"
+        className="w-full max-w-6xl bg-white/5 backdrop-blur-xl rounded-3xl  p-6 sm:p-8"
       >
         <h1 className="text-4xl sm:text-5xl font-extrabold text-black text-center mb-8 sm:mb-12 tracking-tight bg-clip-text  bg-gradient-to-r from-blue-200 to-purple-200">
           Color Palette Explorer
