@@ -121,21 +121,21 @@ export default function DesignSugg() {
         </h1>
         
         {/* Color Buttons */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-10 sm:mb-12">
-          {colors.map((color) => (
-            <motion.button
-              key={color.value}
-              className="relative p-4 rounded-xl overflow-hidden group shadow-md border border-white/10"
-              style={{ backgroundColor: color.value }}
-              onClick={() => setSelectedColor(color)}
-              whileHover={{ scale: 1.05, boxShadow: ' ' }}
-              whileTap={{ scale: 0.95 }}
-              title={color.value} // Show hex code on hover
-            >
-              <div className=" inset-0" />
-            </motion.button>
-          ))}
-        </div>
+       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-5 mb-10 sm:mb-12">
+  {colors.map((color) => (
+    <motion.button
+      key={color.value}
+      className="relative w-30 h-18 rounded-lg overflow-hidden group shadow-md border border-white/10"
+      style={{ backgroundColor: color.value }}
+      onClick={() => setSelectedColor(color)}
+      whileHover={{ scale: 1.05, boxShadow: '0 4px 10px ' }}
+      whileTap={{ scale: 0.95 }}
+      title={color.value} // Show hex code on hover
+    >
+      <div className="inset-0" />
+    </motion.button>
+  ))}
+</div>
 
         {/* Selected Color Images */}
         <AnimatePresence mode="wait">
