@@ -1,10 +1,8 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Colors array with names retained for data structure but not displayed
 const colors = [
   { name: 'Vibrant Red', value: '#FF0000', images: [
     '/ideas/color_sugg/sherwin-williams-red-obsession-April122020-min.jpg',
@@ -54,7 +52,6 @@ const colors = [
     '/ideas/color_sugg/2IDG5-Orange-Colour-Family-Room-900x600-1.webp', 
     '/ideas/color_sugg/shutterstock_500051530_1.jpg'
   ]},
-
   { name: 'Pale Sky', value: '#99CCFF', images: [
     '/ideas/color_sugg/406d15ce12e31196200fef624ff211cb.jpg',
     '/ideas/color_sugg/980b471d4b6c1b977711aa1a30587d1c.webp',
@@ -97,7 +94,7 @@ const colors = [
     '/ideas/color_sugg/Bedroom-49327.avif',
     '/ideas/color_sugg/images1111111.jpg'
   ]},
-    { name: 'Stray Light', value: '#D2D8D0', images: [
+  { name: 'Stray Light', value: '#D2D8D0', images: [
     '/ideas/color_sugg/1196__kitchen_big.jpg',
     '/ideas/color_sugg/1196__living_room_big.jpg',
     '/ideas/color_sugg/1196__kids_room_big.jpg',
@@ -109,71 +106,123 @@ export default function DesignSugg() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   return (
-    <div className="min-h-screen  flex items-center justify-center p-4 sm:p-8 bg-gray-300">
+    <div className="min-h-6xl flex items-start justify-center mt-10 bg-gray-300">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-6xl bg-white/5 backdrop-blur-xl rounded-3xl  p-6 sm:p-8"
+        className="w-full max-w-6xl bg-white/5 backdrop-blur-xl rounded-3xl p-6 flex flex-col lg:flex-row"
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-black text-center mb-8 sm:mb-12 tracking-tight bg-clip-text  bg-gradient-to-r from-blue-200 to-purple-200">
-          Color Palette Explorer
-        </h1>
-        
-        {/* Color Buttons */}
-       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-5 mb-10 sm:mb-12">
-  {colors.map((color) => (
-    <motion.button
-      key={color.value}
-      className="relative w-30 h-18 rounded-lg overflow-hidden group shadow-md border border-white/10"
-      style={{ backgroundColor: color.value }}
-      onClick={() => setSelectedColor(color)}
-      whileHover={{ scale: 1.05, boxShadow: '0 4px 10px ' }}
-      whileTap={{ scale: 0.95 }}
-      title={color.value} // Show hex code on hover
-    >
-      <div className="inset-0" />
-    </motion.button>
-  ))}
-</div>
+        {/* Mobile/Tablet Layout - Color Buttons on Top */}
+        <div className="lg:hidden mb-8">
+          <h1 className="text-4xl font-extrabold text-black text-center mb-8 tracking-tight bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
+            Color Palette Explorer
+          </h1>
+          
+          <h3 className="text-lg font-semibold text-black mb-4">Color Palette</h3>
+          <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
+            {colors.map((color) => (
+              <motion.button
+                key={color.value}
+                className={`relative aspect-square rounded-lg overflow-hidden group shadow-md border-2 ${selectedColor.value === color.value ? 'border-white' : 'border-transparent'}`}
+                style={{ backgroundColor: color.value }}
+                onClick={() => setSelectedColor(color)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                title={`${color.name} (${color.value})`}
+              >
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {selectedColor.value === color.value && (
+                    <motion.span 
+                      className="text-white text-xs font-bold drop-shadow-md text-center px-1"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    >
+                      {color.name.split(' ')[0]}
+                    </motion.span>
+                  )}
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </div>
 
-        {/* Selected Color Images */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedColor.value}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-6 sm:mb-8">
-              Color {selectedColor.name} Inspiration
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {selectedColor.images.map((image, index) => (
-                <motion.div
-                  key={`${selectedColor.value}-${index}`}
-                  className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden shadow-lg group"
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <img
-                    src={image}
-                    alt={`Color ${selectedColor.value} inspiration ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://via.placeholder.com/200';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-white text-sm font-medium">Inspiration #{index + 1}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        {/* Main Content Area - Images */}
+        <div className="flex-1 lg:pr-6">
+          {/* Desktop Title - Hidden on mobile */}
+          <h1 className="hidden lg:block text-4xl font-extrabold text-black text-center mb-8 tracking-tight bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
+            Color Palette Explorer
+          </h1>
+          
+          {/* Selected Color Images in 2x2 grid */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedColor.value}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="mb-6"
+            >
+              <h2 className="text-2xl font-semibold text-black mb-6">
+                {selectedColor.name} Inspiration
+              </h2>
+              <div className="grid grid-cols-2 gap-1">
+                {selectedColor.images.slice(0, 4).map((image, index) => (
+                  <motion.div
+                    key={`${selectedColor.value}-${index}`}
+                    className="relative w-full h-48 sm:h-64 rounded-xl overflow-hidden shadow-lg group"
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <img
+                      src={image}
+                      alt={`${selectedColor.name} inspiration ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://via.placeholder.com/200';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-opacity" />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <p className="text-white text-sm font-medium">Inspiration #{index + 1}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Desktop Layout - Color Buttons Sidebar */}
+        <div className="hidden lg:block w-64 flex-shrink-0 mt-20">
+          <h3 className="text-lg font-semibold text-black mb-4">Color Palette</h3>
+          <div className="grid grid-cols-3 gap-2">
+            {colors.map((color) => (
+              <motion.button
+                key={color.value}
+                className={`relative aspect-square rounded-lg overflow-hidden group shadow-md border-2 ${selectedColor.value === color.value ? 'border-white' : 'border-transparent'}`}
+                style={{ backgroundColor: color.value }}
+                onClick={() => setSelectedColor(color)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                title={`${color.name} (${color.value})`}
+              >
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {selectedColor.value === color.value && (
+                    <motion.span 
+                      className="text-white text-xs font-bold drop-shadow-md text-center px-1"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    >
+                      {color.name}
+                    </motion.span>
+                  )}
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </div>
       </motion.div>
     </div>
   );
