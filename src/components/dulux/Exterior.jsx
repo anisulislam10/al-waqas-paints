@@ -213,43 +213,44 @@ const DExterior = () => {
       detailsLink: "/dulux/ext/dulux-red-oxide-metal-primer",
       titleLink: "/dulux/ext/dulux-red-oxide-metal-primer",
     },
-    // {
-    //   id: 16,
-    //   title: "Paintex Ultraprime",
-    //   category: "Exterior",
-    //   image: "/dulux/exterior/16.avif",
-    //   features: [
-    //     "High Quality Solvent Based Sealer",
-    //     "Reduces Damage From Alkali and Salts",
-    //     "No Added Lead or Mercury"
-    //   ],
-    //   detailsLink: "/dulux/ext/paintex-ultraprime",
-    //   titleLink: "/dulux/ext/paintex-ultraprime",
-    // },
-    // {
-    //   id: 17,
-    //   title: "Dulux Woodcare PU Lacquer",
-    //   category: "Exterior",
-    //   image: "/dulux/exterior/17.jpg",
-    //   features: [
-    //     "High Quality and Excellent Durability",
-    //     "Provides Protection from UV Light",
-    //     "No Added Lead or Mercury"
-    //   ],
-    //   detailsLink: "/dulux/ext/dulux-woodcare-pu-lacquer",
-    //   titleLink: "/dulux/ext/dulux-woodcare-pu-lacquer",
-    // },
-    // {
-    //   id: 18,
-    //   title: "Dulux Woodcare Special Thinner",
-    //   category: "Exterior",
-    //   image: "/dulux/exterior/18.jpg",
-    //   features: [
-    //     "No Added Lead or Mercury"
-    //   ],
-    //   detailsLink: "/dulux/ext/dulux-woodcare-special-thinner",
-    //   titleLink: "/dulux/ext/dulux-woodcare-special-thinner",
-    // },
+    
+    {
+      id: 16,
+      title: "Paintex Ultraprime",
+      category: "Exterior",
+      image: "/dulux/exterior/16.avif",
+      features: [
+        "High Quality Solvent Based Sealer",
+        "Reduces Damage From Alkali and Salts",
+        "No Added Lead or Mercury"
+      ],
+      detailsLink: "/dulux/ext/paintex-ultraprime",
+      titleLink: "/dulux/ext/paintex-ultraprime",
+    },
+    {
+      id: 17,
+      title: "Dulux Woodcare PU Lacquer",
+      category: "Exterior",
+      image: "/dulux/exterior/17.jpg",
+      features: [
+        "High Quality and Excellent Durability",
+        "Provides Protection from UV Light",
+        "No Added Lead or Mercury"
+      ],
+      detailsLink: "/dulux/ext/dulux-woodcare-pu-lacquer",
+      titleLink: "/dulux/ext/dulux-woodcare-pu-lacquer",
+    },
+    {
+      id: 18,
+      title: "Dulux Woodcare Special Thinner",
+      category: "Exterior",
+      image: "/dulux/exterior/18.jpg",
+      features: [
+        "No Added Lead or Mercury"
+      ],
+      detailsLink: "/dulux/ext/dulux-woodcare-special-thinner",
+      titleLink: "/dulux/ext/dulux-woodcare-special-thinner",
+    },
     // {
     //   id: 19,
     //   title: "Dulux Exterior Crackbridging Primer",
