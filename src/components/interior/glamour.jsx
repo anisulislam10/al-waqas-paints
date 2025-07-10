@@ -38,7 +38,7 @@ Nippon Glamour is a premium quality water based matt formulated on specialized A
       src="/low_voc.png" 
       alt="Low VOC icon"
       width={72}
-      height={6}good_leveling_coverage
+      height={6}
       className="rounded-lg  object-contain w-full h-full"
     />
        </div>

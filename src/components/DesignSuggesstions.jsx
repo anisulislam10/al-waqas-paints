@@ -54,13 +54,62 @@ const colors = [
     '/ideas/color_sugg/2IDG5-Orange-Colour-Family-Room-900x600-1.webp', 
     '/ideas/color_sugg/shutterstock_500051530_1.jpg'
   ]},
+
+  { name: 'Pale Sky', value: '#99CCFF', images: [
+    '/ideas/color_sugg/406d15ce12e31196200fef624ff211cb.jpg',
+    '/ideas/color_sugg/980b471d4b6c1b977711aa1a30587d1c.webp',
+    '/ideas/color_sugg/sky-blue-color_0_1200.jpg.webp',
+    '/ideas/color_sugg/0Y7A5605-b3a8a4ee1d7149b2998a7d61d64fd0e6.jpg'
+  ]},
+  { name: 'Soft Sage', value: '#B2D8B2', images: [
+    '/ideas/color_sugg/10gy-58__105_granite.jpg.jpg',
+    '/ideas/color_sugg/10gy-58__105_audreys.jpg.jpg',
+    '/ideas/color_sugg/10gy-58__105_deep.jpg',
+    '/ideas/color_sugg/10gy-58__105_pacific.jpg'
+  ]},
+  { name: 'Lemon Chiffon', value: '#FFFACD', images: [
+    '/ideas/color_sugg/images11.png',
+    '/ideas/color_sugg/a694cae1c6fe1d8fff450245d7ee925e.jpg',
+    '/ideas/color_sugg/Bathroom-52622.avif',
+    '/ideas/color_sugg/Livingroom-52622.avif'
+  ]},
+  { name: 'Lavender Mist', value: '#E6E6FA', images: [
+    '/ideas/color_sugg/feafaa25d609e146cae0dee98bd8d905.jpg',
+    '/ideas/color_sugg/lavender-mist-benjamin-moore.jpg.webp',
+    '/ideas/color_sugg/m_lavender-bedroom-design.jpg',
+    '/ideas/color_sugg/Lavender-bedroom-painted-pitched-ceiling.jpeg'
+  ]},
+  { name: 'Blush Pink', value: '#FFCCCB', images: [
+    '/ideas/color_sugg/4gEUfWXuzVcAFEhZpK76d9.jpg',
+    '/ideas/color_sugg/fc4545e87e3ed3451f1441e20c64f155.jpg',
+    '/ideas/color_sugg/dulux-easycare-blush-pink-soft-sheen-emulsion-paint-2-5l~5010212633281_02i_bq.webp',
+    '/ideas/color_sugg/SS24-COPCB1L-COPCB25L-SQUARE.jpg'
+  ]},
+  { name: 'Creamy Beige', value: '#F5F5DC', images: [
+    '/ideas/color_sugg/Gentle-Cream-colour.jpg',
+    '/ideas/color_sugg/8a10f87a4713d4228bae164b0bf3d0b5.jpg',
+    '/ideas/color_sugg/Moon_glow_3_cc41037a-c60c-443e-9c91-88c04c625ada.webp',
+    '/ideas/color_sugg/A.S.Helsingo-Milieu-Interior-Paint-in-Ivory-Beige-2_720x.webp'
+  ]},
+  { name: 'Aqua Tint', value: '#7B9591', images: [
+    '/ideas/color_sugg/DiningRoom-49327.avif',
+    '/ideas/color_sugg/Livingroom-49327.avif',
+    '/ideas/color_sugg/Bedroom-49327.avif',
+    '/ideas/color_sugg/images1111111.jpg'
+  ]},
+    { name: 'Stray Light', value: '#D2D8D0', images: [
+    '/ideas/color_sugg/1196__kitchen_big.jpg',
+    '/ideas/color_sugg/1196__living_room_big.jpg',
+    '/ideas/color_sugg/1196__kids_room_big.jpg',
+    '/ideas/color_sugg/1196__bedroom_big.jpg'
+  ]},
 ];
 
 export default function DesignSugg() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   return (
-    <div className="min-h-screen  flex items-center justify-center p-4 sm:p-8">
+    <div className="min-h-screen  flex items-center justify-center p-4 sm:p-8 bg-gray-300">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -76,14 +125,14 @@ export default function DesignSugg() {
           {colors.map((color) => (
             <motion.button
               key={color.value}
-              className="relative p-6 rounded-xl overflow-hidden group shadow-md border border-white/10"
+              className="relative p-4 rounded-xl overflow-hidden group shadow-md border border-white/10"
               style={{ backgroundColor: color.value }}
               onClick={() => setSelectedColor(color)}
-              whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(255,255,255,0.3)' }}
+              whileHover={{ scale: 1.05, boxShadow: ' ' }}
               whileTap={{ scale: 0.95 }}
               title={color.value} // Show hex code on hover
             >
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-opacity" />
+              <div className=" inset-0" />
             </motion.button>
           ))}
         </div>
