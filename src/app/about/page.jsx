@@ -22,6 +22,21 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
+      <title>About Al-Waqas Paint | Premium Eco-Friendly Coatings</title>
+        <meta name="description" content="Learn about Al-Waqas Paint, a trusted name in premium, eco-conscious coating solutions for interiors, exteriors, and specialized surfaces." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://www.alwaqaspaint.com/about/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Al-Waqas Paint",
+            url: "https://www.alwaqaspaint.com",
+            description: "Al-Waqas Paint provides premium, eco-friendly coating solutions for interiors, exteriors, and specialized surfaces.",
+            sameAs: ["https://facebook.com/alwaqaspaint"], // Add if applicable
+          })}
+        </script>
       <main className="flex-grow">
         {/* Header Section */}
         <section
