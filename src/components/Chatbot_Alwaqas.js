@@ -15,11 +15,11 @@ export default function ChatbotLoader() {
         websiteDomain: "https://www.alwaqaspaint.com",
         position: "bottom-right",
         theme: {
-          primary: "#7C3AED",
-          secondary: "#F59E0B",
+          primary: "#00A63E",
+          secondary: "#00A63E",
           background: "#FFFFFF",
           text: "#1F2937",
-          buttonText: "#FFFFFF"
+          buttonText: "#00A63E"
         }
       };
       setTimeout(() => {
